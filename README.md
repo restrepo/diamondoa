@@ -1,5 +1,5 @@
 # Diamond Open Access journals
-Deploy info from API-REST response
+Deploy info from API-REST response.
 
 ## Pages from GitHub Actions
 * Go to "Settings" -> "Pages".
