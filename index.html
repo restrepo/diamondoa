@@ -7,26 +7,17 @@
 	<p>EXAMPLE: add <code>?concept=C109214941</code> at the end of the url </p>
 	<p>and recheck the <b>result:</b></p>
 	<form action="">
-	  <label for="cars">Choose a car:</label>
-	  <select name="cars" id="cars">
-	    <option value="volvo">Volvo</option>
+	  <label for="concept">Choose a level-one OpenAlex concept:</label>
+	  <select name="concept" id="concept">
 	    <option value="saab">Saab</option>
 	    <option value="opel">Opel</option>
 	    <option value="audi">Audi</option>
+	    <option value="C109214941">Particle Physics</option>		  
 	  </select>
 	  <br><br>
 	  <input type="submit" value="Submit">
 	</form>
 	
-	<form>
-	  <input type="checkbox" name="vehicle1" value="Bike">
-	  <label for="vehicle1"> I have a bike</label><br>
-	  <input type="checkbox" name="vehicle2" value="Car">
-	  <label for="vehicle2"> I have a car</label><br>
-	  <input type="checkbox" name="vehicle3" value="Boat" checked>
-	  <label for="vehicle3"> I have a boat</label><br><br>
-	  <input type="submit" value="Submit">
-	</form>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
