@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sample page</title>
+	<title>Diamon open access</title>
 </head>
 <body>
-	<p>EXAMPLE: add <code>?concept=C109214941</code> at the end of the url </p>
-	<p>and recheck the <b>result:</b></p>
+	<h1>Diamond Open Alex Journal search<h1>
+	<p>for <a href="https://github.com/restrepo/diamond/blob/main/static/data/level_1_concepts.csv">level-one OpenAlex concepts</a> </p>
+	<form action="">
+	  <label for="concept">Select a level-one OpenAlex concept:</label>
+	  <select name="concept" id="concept">
+	    <option value="C109214941">Particle physics</option>		  
+	  </select>
+	  <br><br>
+	  <input type="submit" value="Submit">
+	</form>
+	
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
@@ -17,6 +26,8 @@
 		const urlParams = new URLSearchParams(queryString);
 		const concept = urlParams.get('concept');
 		console.log(concept);
+		var coffee = document.forms[0];
+		console.log(coffee)
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept`
