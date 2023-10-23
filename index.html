@@ -4,7 +4,7 @@
 	<title>Sample page</title>
 </head>
 <body>
-	<p>EXAMPLE: add <code>?concept=particle+physics</code> at the end of the url </p>
+	<p>EXAMPLE: add <code>?concept=C109214941</code> at the end of the url </p>
 	<p>and recheck the <b>result:</b></p>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
@@ -23,7 +23,7 @@
 		fetch("https://api.openalex.org/sources?filter=concept_id:" + concept + ",apc_usd:0")
 		.then(response => response.json())
 		.then(data => {
-			console.log(data.faculties[0]) <!-- This is to debug -->
+			console.log(data.results[0]) <!-- This is to debug -->
 			// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
 			document.querySelector("#debug").innerText = "Journal:" + data.results[0].display_name + " Publisher" + data.results[0].host_organization_name <!-- Get the name of the selected professor -->
 		})
