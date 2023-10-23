@@ -61,14 +61,14 @@
 		// Create a function to display the json data dynamically on the webpage
 		function jsonList(item) {
 		  // Create a new div element dynamically
-		  const div = document.createElement("div");
+		  //const div = document.createElement("div");
 		  // get the required details from the local.json file to the div element using innerHTML
-		  div.innerHTML = `
-		       Journal: ${item.display_name}, Publisher: ${item.host_organization_name}, Articles: ${item.works_count}, Citations ${item.cited_by_count},  h-index ${item.summary_stats.h_index},`;
+		  //div.innerHTML = `
+		   document.querySelector("#debug").innerText =   `Journal: ${item.display_name}, Publisher: ${item.host_organization_name}, Articles: ${item.works_count}, Citations ${item.cited_by_count},  h-index ${item.summary_stats.h_index},`;
 		  // attach the newly created div element to the original div element, in this case to the class '.output'
-		  output.append(div);
+		  //output.append(div);
 		  // Add styling to the displayed content
-		  div.classList.add("active");
+		  //div.classList.add("active");
 		}
 	</script>
 </body>
