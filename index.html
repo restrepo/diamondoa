@@ -4,27 +4,28 @@
 	<title>Sample page</title>
 </head>
 <body>
-	<p>EXAMPLE: add <code>?username=amedagli</code> at the end of the url </p>
+	<p>EXAMPLE: add <code>?concept=particle+physics</code> at the end of the url </p>
 	<p>and recheck the <b>result:</b></p>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
-		// **** BEGIN: Get the URL parameter: `username` ****
+		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
 		const urlParams = new URLSearchParams(queryString);
-		const username = urlParams.get('username');
-		console.log(username);
-		// amedagli or cavila for example
-		// **** END: Get the URL parameter: `username`   ****
-		// Use an API-REST call to get the `data` for the url parameter `username`
-		fetch("https://academia.uniandes.edu.co/WebServicesAcademy/api/professors?username=" + username)
+		const concept = urlParams.get('concept');
+		console.log(concept);
+		// C109214941 or ... for example
+		// **** END: Get the URL parameter: `concept`   ****
+		// Use an API-REST call to get the `data` for the url parameter `concept`
+		fetch("https://api.openalex.org/sources?filter=concept_id:" + concept + ",apc_usd:0")
 		.then(response => response.json())
 		.then(data => {
 			console.log(data.faculties[0]) <!-- This is to debug -->
-			document.querySelector("#debug").innerText = data.faculties[0].name + " " + data.faculties[0].lastname <!-- Get the name of the selected professor -->
+			// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
+			document.querySelector("#debug").innerText = "Journal:" + data.results[0].display_name + " Publisher" + data.results[0].host_organization_name <!-- Get the name of the selected professor -->
 		})
 	</script>
 </body>
