@@ -20,10 +20,12 @@
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept`
-		fetch("https://api.openalex.org/sources?filter=concept_id:" + concept + ",apc_usd:0")
+		const apirest = "https://api.openalex.org/sources?filter=concept_id:" + concept + ",apc_usd:0";
+		console.log("https://api.openalex.org/sources?filter=concept_id:" + concept + ",apc_usd:0");
+		fetch(apirest)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data.results[0]) <!-- This is to debug -->
+			console.log(data.results) <!-- This is to debug -->
 			// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
 			document.querySelector("#debug").innerText = "Journal:" + data.results[0].display_name + " Publisher" + data.results[0].host_organization_name <!-- Get the name of the selected professor -->
 		})
