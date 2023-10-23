@@ -6,12 +6,15 @@
 <body>
 	<p>EXAMPLE: add <code>?concept=C109214941</code> at the end of the url </p>
 	<p>and recheck the <b>result:</b></p>
-	<select name="app" id="app1">
-         <option value=1>A</option>
-         <option value=2>B</option>
-         <option value=3>C</option>
-         <option value=4>D</option>
-        </select> 
+	<form action="action">
+	  <input type="checkbox" name="vehicle1" value="Bike">
+	  <label for="vehicle1"> I have a bike</label><br>
+	  <input type="checkbox" name="vehicle2" value="Car">
+	  <label for="vehicle2"> I have a car</label><br>
+	  <input type="checkbox" name="vehicle3" value="Boat" checked>
+	  <label for="vehicle3"> I have a boat</label><br><br>
+	  <input type="submit" value="Submit">
+	</form>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
