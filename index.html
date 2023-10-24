@@ -300,6 +300,16 @@
 	  <input type="submit" value="Submit">
 	</form>
 
+	<button onclick="getOption()"> Check option </button>
+	     
+	<script type="text/javascript">
+	    function getOption() {
+	        selectElement = document.querySelector('#concept');
+	        output = selectElement.value;
+	        document.querySelector('.output').textContent = output;
+	    }
+	</script>	
+
 	<h3>Results</h3>
 	<p>Only first 25 journals are shown</p>
 	<hr>
