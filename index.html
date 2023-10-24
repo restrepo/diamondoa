@@ -316,6 +316,8 @@
 		// TODO: Could be also obtained from the selected option `value` (see below for text)
 		const urlParams = new URLSearchParams(queryString);
 		const concept = urlParams.get('concept');
+		var Concept = sel.options[sel.selectedIndex].value;
+		console.log("concept:" + Concept);
 		console.log(concept);
 		if (!concept) {
 			console.log("Not concept");
