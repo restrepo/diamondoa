@@ -318,6 +318,10 @@
 			console.log("Not concept");
 			throw 'bye';
 		}
+		var sel = document.getElementById("box1");
+		var text= sel.options[sel.selectedIndex].text;
+		console.log(text);
+		
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept`
