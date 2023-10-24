@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h2>Diamond open access journals</h2>
-	<p>Search <a href="https://en.wikipedia.org/wiki/Diamond_open_access">Diamond open access</a> journals for <a href="https://github.com/restrepo/diamond/blob/main/static/data/level_1_concepts.csv">level-one OpenAlex concepts</a> </p>
+	<p>Search <a href="https://en.wikipedia.org/wiki/Diamond_open_access">Diamond open access</a> journals for <a href="https://github.com/restrepo/diamond/blob/main/static/data/level_1_concepts.csv">level-one OpenAlex concepts:</a> </p>
 	<form action="">
 	  <!-- <p><label for="concept">Select a level-one OpenAlex concept:</label></p> -->
 	  <select name="concept" id="concept" onChange="myNewFunction(this);">
@@ -315,11 +315,12 @@
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
 		// TODO: Could be also obtained from the selected option `value` (see below for text)
-		//const urlParams = new URLSearchParams(queryString);
-		//const concept = urlParams.get('concept');
+		const urlParams = new URLSearchParams(queryString);
+		const Concept = urlParams.get('concept');
+		console.log("Concept: " + concept);		
 		var concept = sel.options[sel.selectedIndex].value;
-		console.log("concept:" + concept);
-		//console.log(concept);
+		console.log("concept: " + concept);
+		//If concept not in URL is in select
 		if (!concept) {
 			console.log("Not concept");
 			throw 'bye';
