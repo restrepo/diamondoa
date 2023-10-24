@@ -10,7 +10,7 @@
 	<p>Search <a href="https://en.wikipedia.org/wiki/Diamond_open_access">Diamond open access</a> journals for <a href="https://github.com/restrepo/diamond/blob/main/static/data/level_1_concepts.csv">level-one OpenAlex concepts</a> </p>
 	<form action="">
 	  <p><label for="concept">Select a level-one OpenAlex concept:</label></p>
-	  <select name="concept" id="concept" onChange="myNewFunction(this);">
+	  <select name="concept" id="concept" onChange="myNewFunction(this);>
 	        <option value="C124952713"> Art → Literature </option>
 		<option value="C153349607"> Art → Visual arts </option>
 		<option value="C52119013"> Art, History → Art history </option>
@@ -319,9 +319,13 @@
 			throw 'bye';
 		}
 		function myNewFunction(sel) {
-		  var text = sel.options[sel.selectedIndex].text);
-		  console.log(text);
+		  alert(sel.options[sel.selectedIndex].text);
 		}		
+		var sel = document.getElementById("concept");
+		var text= sel.options[sel.selectedIndex].text;
+		console.log(text);
+
+			
 		
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
