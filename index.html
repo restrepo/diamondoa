@@ -346,7 +346,7 @@
 		console.log(formText);
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<table><tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table birder="1" style="width:100%"><tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>';
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
 		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
