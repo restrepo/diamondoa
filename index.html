@@ -346,8 +346,8 @@
 		console.log(formText);
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<table><tr><th>Company</th> </tr></table>";
-		  
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<table><tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
 		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
