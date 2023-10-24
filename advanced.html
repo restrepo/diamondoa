@@ -27,7 +27,6 @@
 		const queryString = window.location.search;
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
-		// TODO: Could be also obtained from the selected option `value` (see below for text)
 		const urlParams = new URLSearchParams(queryString);
 		const concept = urlParams.get('concept');
 
@@ -39,7 +38,7 @@
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 
-    //*** CODE IS THE SAME FROM HERE: Copy and Paste from index.html    
+                //*** CODE IS THE SAME FROM HERE: Copy and Paste from index.html    
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
 		console.log(apirest);
