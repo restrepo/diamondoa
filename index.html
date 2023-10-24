@@ -306,6 +306,8 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
+	function myNewFunction(sel) {
+
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
@@ -318,16 +320,13 @@
 			console.log("Not concept");
 			throw 'bye';
 		}
-		//var formText = "None";
-		function myNewFunction(sel) {
-		  var formText = sel.options[sel.selectedIndex].text;
-		  alert(formText);
-		  console.log(formText);
-		  document.querySelector("#debug").innerText = "hola" + formText;
-		}		
-		//var sel = document.getElementById("concept");
-		//var text= sel.options[sel.selectedIndex].text;
 		
+		  var formText = sel.options[sel.selectedIndex].text;
+		  //alert(formText);
+		  //console.log(formText);
+		  document.querySelector("#debug").innerText = "hola" + formText;
+		
+
 			
 		
 		// C109214941 or ... for example
@@ -371,6 +370,7 @@
 		  // Add styling to the displayed content
 		  //div.classList.add("active");
 		}
+	}	
 	</script>
 	<hr>
 	<h3>Advanced</h3>
