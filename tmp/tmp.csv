@@ -1,50 +1,14 @@
 C, l2
-C68062652, Social capital
-
-id: "https://openalex.org/C198293453",
-wikidata: "https://www.wikidata.org/wiki/Q1587903",
-display_name: "Human science",
-
-C525823164",
-wikidata: "https://www.wikidata.org/wiki/Q472342",
-display_name: "Scientometrics
-
-C2778219744",
-wikidata: "https://www.wikidata.org/wiki/Q5774812",
-display_name: "History and philosophy of science
-
-C23528732",
-wikidata: "https://www.wikidata.org/wiki/Q2445082",
-display_name: "Science, technology and society
-
-C207873717",
-wikidata: "https://www.wikidata.org/wiki/Q847486",
-display_name: "Sociology of knowledge
-
-C158561935",
-wikidata: "https://www.wikidata.org/wiki/Q15820293",
-display_name: "Peace and conflict studies
-
-C57494143",
-wikidata: "https://www.wikidata.org/wiki/Q3274962",
-display_name: "Social statistics
-
-C169175208",
-wikidata: "https://www.wikidata.org/wiki/Q1332231",
-display_name: "Science studies
-
-C126349790",
-wikidata: "https://www.wikidata.org/wiki/Q905036",
-display_name: "Computational sociology
-
-C2778621906",
-wikidata: "https://www.wikidata.org/wiki/Q4115079",
-display_name: "Technology and society
-
-C185774338",
-wikidata: "https://www.wikidata.org/wiki/Q14623843",
-display_name: "Communication sciences
-
-C15664550",
-wikidata: "https://www.wikidata.org/wiki/Q2183341",
-display_name: "History of science and technology
+C68062652,Social capital
+C198293453,Human science,
+C525823164,Scientometrics
+C2778219744,History and philosophy of science
+C23528732,Science, technology and society
+C207873717,Sociology of knowledge
+C158561935,Peace and conflict studies
+C57494143,Social statistics
+C169175208,Science studies
+C126349790,Computational sociology
+C2778621906,Technology and society
+C185774338,Communication sciences
+C15664550,History of science and technology
