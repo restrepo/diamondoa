@@ -313,12 +313,14 @@
 		// ?product=shirt&color=blue&newuser&size=m
 		const urlParams = new URLSearchParams(queryString);
 		const concept = urlParams.get('concept');
+		var parent = document.getElementsByTagName('select')[0];
+		var tempUnit = parent.options[parent.selectedIndex].value;
 		console.log(concept);
 		if (!concept) {
 			console.log("Not concept");
 			throw 'bye';
 		}
-		document.querySelector("#debug").innerText = "Diamond opena access journal for " + concept + "\n\n";
+		document.querySelector("#debug").innerText = "Diamond opena access journal for " + tempUnit + "\n\n";
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept`
