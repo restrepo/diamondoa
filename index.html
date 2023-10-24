@@ -306,32 +306,30 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
+	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
 	function myNewFunction(sel) {
-
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
+		// TODO: Could be also obtained from the selected option `value` (see below for text)
 		const urlParams = new URLSearchParams(queryString);
 		const concept = urlParams.get('concept');
 		console.log(concept);
 		if (!concept) {
 			console.log("Not concept");
 			throw 'bye';
-		}
-		
-		  var formText = sel.options[sel.selectedIndex].text;
-		  //alert(formText);
-		  //console.log(formText);
-		  document.querySelector("#debug").innerText = "hola" + formText;
-		
-
-			
-		
+		}			
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
-		// Use an API-REST call to get the `data` for the url parameter `concept`
+
+		// Obtain the text of the selected option:
+		var formText = sel.options[sel.selectedIndex].text;
+		console.log(formText);
+		document.querySelector("#debug").innerText = "Diamond open access journal for: " + formText + "\n\n";
+		
+		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
 		console.log(apirest);
 		//window.addEventListener("DOMContentLoaded", () => {
