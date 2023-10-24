@@ -317,7 +317,7 @@
 	<h3>Results</h3>
 	<p>Only first 25 journals are shown</p>
 	<hr>
-	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
+	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
 	<div id="debug"></div>
 	<script>
 	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
@@ -344,7 +344,7 @@
 		// Obtain the text of the selected option:
 		var formText = sel.options[sel.selectedIndex].text;
 		console.log(formText);
-		document.querySelector("#debug").innerText = "Diamond open access journal for: " + formText + "\n\n";
+		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
@@ -368,7 +368,7 @@
 		//.then(data => {
 		//	console.log(data.results[0]) <!-- This is to debug -->
 		//	// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
-		//	document.querySelector("#debug").innerText = "Journal: " + data.results[0].display_name + "; Publisher: " + data.results[0].host_organization_name <!-- Get metadata of the selected concept id -->
+		//	document.querySelector("#debug").innerHTML = "Journal: " + data.results[0].display_name + "; Publisher: " + data.results[0].host_organization_name <!-- Get metadata of the selected concept id -->
 		//})
 
 
@@ -378,7 +378,7 @@
 		  //const div = document.createElement("div");
 		  // get the required details from the local.json file to the div element using innerHTML
 		  //div.innerHTML = `
-		   document.querySelector("#debug").innerText = `${document.querySelector("#debug").innerText}  Journal:  ${item.display_name}, Publisher: ${item.host_organization_name}, Country code: ${item.country_code}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index}\n`; 	
+		   document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  Journal:  ${item.display_name}, Publisher: ${item.host_organization_name}, Country code: ${item.country_code}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index}<br>`; 	
 		  //`Journal: ${item.display_name}, Publisher: ${item.host_organization_name}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index},`;
 		  // attach the newly created div element to the original div element, in this case to the class '.output'
 		  //output.append(div);
