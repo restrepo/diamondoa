@@ -321,7 +321,9 @@
 		//var formText = "None";
 		function myNewFunction(sel) {
 		  var formText = sel.options[sel.selectedIndex].text;
-		  console.log(formText);	
+		  alert(formText);
+		  console.log(formText);
+		  document.querySelector("#debug").innerText = "hola" + formText;
 		}		
 		//var sel = document.getElementById("concept");
 		//var text= sel.options[sel.selectedIndex].text;
