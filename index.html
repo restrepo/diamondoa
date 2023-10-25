@@ -361,7 +361,7 @@
   		document.body.appendChild(tbl);
   		// sets the border attribute of tbl to '2'
   		tbl.setAttribute("border", "2");
-
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + tbl
 		
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
