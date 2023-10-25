@@ -347,7 +347,6 @@
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%"><tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>';
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
 		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
@@ -367,28 +366,14 @@
 		        jsonList(el); // calling jsonList function
 		      });
 		    });
-		//});
-		//.then(data => {
-		//	console.log(data.results[0]) <!-- This is to debug -->
-		//	// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
-		//	document.querySelector("#debug").innerHTML = "Journal: " + data.results[0].display_name + "; Publisher: " + data.results[0].host_organization_name <!-- Get metadata of the selected concept id -->
-		//})
-
 
 		// Create a function to display the json data dynamically on the webpage
 		function jsonList(item) {
-		  // Create a new div element dynamically
-		  //const div = document.createElement("div");
-		  // get the required details from the local.json file to the div element using innerHTML
-		  //div.innerHTML = `
-		   document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  Journal:  ${item.display_name}, Publisher: ${item.host_organization_name}, Country code: ${item.country_code}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index}<br>`; 	
-		  //`Journal: ${item.display_name}, Publisher: ${item.host_organization_name}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index},`;
-		  // attach the newly created div element to the original div element, in this case to the class '.output'
-		  //output.append(div);
-		  // Add styling to the displayed content
-		  //div.classList.add("active");
-		}
-	}	
+		   document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
+		};
+		
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
+	};
 	</script>
 	<hr>
 	<h3>Advanced</h3>
