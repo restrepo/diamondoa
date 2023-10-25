@@ -355,11 +355,11 @@
 		cell.appendChild(cellText);
       		row.appendChild(cell);
     		tblBody.appendChild(row);
+                delete cell;		
 		//end row
-
 		//row
 		const row2 = document.createElement("tr");
-		const cell2 = document.createElement("td").appendChild( document.createTextNode("Journal")  );
+		const cell = document.createElement("td").appendChild( document.createTextNode("Journal")  );
       		row2.appendChild(cell2);
     		tblBody.appendChild(row2);
 		//end row
@@ -371,7 +371,8 @@
 		//https://stackoverflow.com/a/7018615/2268280
   		document.querySelector("#debug").appendChild(tbl);
   		// sets the border attribute of tbl to '2'
-  		tbl.setAttribute("border", "2");
+  		tbl.setAttribute("border", "1");
+		tbl.setAttribute("style", "width:100%");
 		
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
