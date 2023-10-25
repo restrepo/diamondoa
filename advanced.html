@@ -22,6 +22,10 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
+		//https://bobbyhadz.com/blog/javascript-get-country-name-from-country-code
+		const regionNames = new Intl.DisplayNames(
+		  ['en'], {type: 'region'}
+		);		
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
