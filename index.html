@@ -406,9 +406,8 @@
 			var createA = document.createElement('a');
         		var createAText = document.createTextNode("Google");
         		createA.setAttribute('href', "http://google.com");
-        		createA.appendChild(createAText);
 			
-	      		row2.appendChild( insertCell(createA.appendChild(createAText) ))
+	      		row2.appendChild( insertCell(createA.appendChild(createAText).innerHTML ))
 				//`${item.display_name}`) );
 	      		row2.appendChild( insertCell(`${item.host_organization_name}`) );
 			row2.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
