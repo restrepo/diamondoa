@@ -357,42 +357,18 @@
       		row1.appendChild(cell11);
 		//end cell
 		const cell12 = document.createElement("td");
-		const celltext12 = document.createTextNode("Journal")
+		const celltext12 = document.createTextNode("Publisher")
 		cell12.appendChild(celltext12)
       		row1.appendChild(cell12);
 		//end cell
     		tblBody.appendChild(row1);
 		//end row
-		//row
-		const row2 = document.createElement("tr");
-		//cell
-		const cell21 = document.createElement("td");
-		const celltext21 = document.createTextNode("Journal")
-		cell21.appendChild(celltext21)
-      		row2.appendChild(cell21);
-		//end cell
-		//cell
-		const cell22 = document.createElement("td");
-		const celltext22 = document.createTextNode("Journal")
-		cell22.appendChild(celltext22)
-      		row2.appendChild(cell22);
-		//end cell
-
-		tblBody.appendChild(row2);
-		//end row
 
 		
-  		// put the <tbody> in the <table>
-  		tbl.appendChild(tblBody);
-  		// appends <table> into <body>
-		//https://stackoverflow.com/a/7018615/2268280
-  		document.querySelector("#debug").appendChild(tbl);
-  		// sets the border attribute of tbl to '2'
-  		tbl.setAttribute("border", "1");
-		tbl.setAttribute("style", "width:100%");
+  		
 		
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
+		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
+		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
 		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
@@ -415,10 +391,36 @@
 
 		// Create a function to display the json data dynamically on the webpage
 		function jsonList(item) {
-		   document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
+		       //document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
+			//row
+			const row2 = document.createElement("tr");
+			//cell
+			const cell21 = document.createElement("td");
+			const celltext21 = document.createTextNode("Journal")
+			cell21.appendChild(celltext21)
+	      		row2.appendChild(cell21);
+			//end cell
+			//cell
+			const cell22 = document.createElement("td");
+			const celltext22 = document.createTextNode("Journal")
+			cell22.appendChild(celltext22)
+	      		row2.appendChild(cell22);
+			//end cell
+	
+			tblBody.appendChild(row2);
+			//end row
+			
 		};
 		
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
+		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
+                // put the <tbody> in the <table>
+  		tbl.appendChild(tblBody);
+  		// appends <table> into <body>
+		//https://stackoverflow.com/a/7018615/2268280
+  		document.querySelector("#debug").appendChild(tbl);
+  		// sets the border attribute of tbl to '2'
+  		tbl.setAttribute("border", "1");
+		tbl.setAttribute("style", "width:100%");		
 	};
 	</script>
 	<hr>
