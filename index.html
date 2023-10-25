@@ -328,24 +328,13 @@
 		const regionNames = new Intl.DisplayNames(
 		  ['en'], {type: 'region'}
 		);		
-		// **** BEGIN: Get the URL parameter: `concept` ****
-		// https://www.sitepoint.com/get-url-parameters-with-javascript/
-		const queryString = window.location.search;
-		console.log(queryString);
-		// ?product=shirt&color=blue&newuser&size=m
-		// TODO: Could be also obtained from the selected option `value` (see below for text)
-		const urlParams = new URLSearchParams(queryString);
-		const Concept = urlParams.get('concept');
-		console.log("Concept: " + concept);		
 		var concept = sel.options[sel.selectedIndex].value;
 		console.log("concept: " + concept);
-		//If concept not in URL is in select
 		if (!concept) {
 			console.log("Not concept");
 			throw 'bye';
 		}			
 		// C109214941 or ... for example
-		// **** END: Get the URL parameter: `concept`   ****
 
 		// Obtain the text of the selected option:
 		var formText = sel.options[sel.selectedIndex].text;
@@ -374,19 +363,9 @@
 		//end row
 		tbl.appendChild(tblHead);
 
-
-		
-  		
-		
-		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
-		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
-		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
 		console.log(apirest);
-		//window.addEventListener("DOMContentLoaded", () => {
-  		// console.log('DOM fully loaded and parsed');
-  		//output.textContent = "Loading....";
 		fetch(apirest)
 		.then(response => response.json())
 		.then((data) => {
@@ -402,7 +381,6 @@
 
 		// Create a function to display the json data dynamically on the webpage
 		function jsonList(item) {
-		       //document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
 			//row
 			const row2 = document.createElement("tr");
 			
@@ -414,10 +392,8 @@
 			row2.appendChild( insertCell(`${item.summary_stats.h_index}`) );
 			tblBody.appendChild(row2);
 			//end row
-			
 		};
 		
-		//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "</table>";
                 // put the <tbody> in the <table>
   		tbl.appendChild(tblBody);
   		// appends <table> into <body>
