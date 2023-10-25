@@ -358,17 +358,20 @@
 		};
 		
 		const tbl = document.createElement("table");
-  		const tblBody = document.createElement("tbody");
+  		const tblHead = document.createElement("thead");		
+  		const tblBody = document.createElement("tbody");		
 		//row
 		const row1 = document.createElement("tr");
-      		row1.appendChild( insertCell("Journal")  );
+      		row1.appendChild( insertCell("Journal") );
       		row1.appendChild( insertCell("Publisher") );
-		row1.appendChild( insertCell( "Country") );
+		row1.appendChild( insertCell("Country") );
 		row1.appendChild( insertCell("Articles") );
 		row1.appendChild( insertCell("Citations") );
 		row1.appendChild( insertCell("h-index") );
-    		tblBody.appendChild(row1);
+    		tblHead.appendChild(row1);
 		//end row
+		tbl.appendChild(tblHead);
+
 
 		
   		
@@ -400,6 +403,7 @@
 		       //document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
 			//row
 			const row2 = document.createElement("tr");
+			
 	      		row2.appendChild( insertCell(`${item.display_name}`) );
 	      		row2.appendChild( insertCell(`${item.host_organization_name}`) );
 			row2.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
@@ -419,7 +423,7 @@
   		document.querySelector("#debug").appendChild(tbl);
   		// sets the border attribute of tbl to '2'
   		tbl.setAttribute("border", "1");
-		tbl.setAttribute("style", "width:100%");		
+		//tbl.setAttribute("style", "width:100%");		
 	};
 	</script>
 	<hr>
