@@ -322,6 +322,9 @@
 	<script>
 	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
 	function myNewFunction(sel) {
+		const regionNames = new Intl.DisplayNames(
+		  ['en'], {type: 'region'}
+		);		
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
