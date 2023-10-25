@@ -355,6 +355,18 @@
 		cell.appendChild(cellText);
       		row.appendChild(cell);
     		tblBody.appendChild(row);
+		//end row
+
+		//row
+		const row = document.createElement("tr");
+		const cell = document.createElement("td");
+		const cellText = document.createTextNode("Journal");
+		cell.appendChild(cellText);
+      		row.appendChild(cell);
+    		tblBody.appendChild(row);
+		//end row
+
+		
   		// put the <tbody> in the <table>
   		tbl.appendChild(tblBody);
   		// appends <table> into <body>
