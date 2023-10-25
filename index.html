@@ -359,6 +359,10 @@
 		const row1 = document.createElement("tr");
       		row1.appendChild( insertCell("Journal")  );
       		row1.appendChild( insertCell("Publisher") );
+		row1.appendChild( insertCell("Country code") );
+		row1.appendChild( insertCell("Articles") );
+		row1.appendChild( insertCell("Citations") );
+		row1.appendChild( insertCell("h-index") );
     		tblBody.appendChild(row1);
 		//end row
 
@@ -394,6 +398,10 @@
 			const row2 = document.createElement("tr");
 	      		row2.appendChild( insertCell(`${item.display_name}`) );
 	      		row2.appendChild( insertCell(`${item.host_organization_name}`) );
+			row2.appendChild( insertCell(`${item.country_code}`) );
+			row2.appendChild( insertCell(`${item.works_count}`) );
+			row2.appendChild( insertCell(`${item.cited_by_count}`) );
+			row2.appendChild( insertCell(`${item.summary_stats.h_index}`) );
 			tblBody.appendChild(row2);
 			//end row
 			
