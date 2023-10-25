@@ -53,7 +53,7 @@
 	  		const tblBody = document.createElement("tbody");		
 			//row
 			const row1 = document.createElement("tr");
-	      		row1.appendChild( insertCell("Journal") );
+	      		row1.appendChild( insertCell("<b>Journal</b>") );
 	      		row1.appendChild( insertCell("Publisher") );
 			row1.appendChild( insertCell("Country") );
 			row1.appendChild( insertCell("Articles") );
@@ -91,7 +91,7 @@
 				var htmlNode = document.createElement('span');
     				htmlNode.innerHTML = ctext;
     				//htmlNode.className = 'treehtml';
-    				htmlNode.setAttribute("style","font-weight: bold;");
+    				//htmlNode.setAttribute("style","font-weight: bold;");
 				cell.appendChild(htmlNode);
 				return cell;
 			};		
