@@ -350,17 +350,14 @@
   		const tblBody = document.createElement("tbody");
 		//row
 		const row = document.createElement("tr");
-		const cell = document.createElement("td");
-		const cellText = document.createTextNode("Journal");
-		cell.appendChild(cellText);
+		const cell = document.createElement("td").appendChild( document.createTextNode("Journal")  );
       		row.appendChild(cell);
     		tblBody.appendChild(row);
-                delete cell;		
 		//end row
 		//row
 		const row2 = document.createElement("tr");
-		const cell = document.createElement("td").appendChild( document.createTextNode("Journal")  );
-      		row2.appendChild(cell);
+		const cell2 = document.createElement("td").appendChild( document.createTextNode("Journal")  );
+      		row2.appendChild(cell2);
     		tblBody.appendChild(row2);
 		//end row
 
