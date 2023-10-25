@@ -358,10 +358,10 @@
   		// put the <tbody> in the <table>
   		tbl.appendChild(tblBody);
   		// appends <table> into <body>
-  		document.body.appendChild(tbl);
+		//https://stackoverflow.com/a/7018615/2268280
+  		document.querySelector("#debug").appendChild(tbl);
   		// sets the border attribute of tbl to '2'
   		tbl.setAttribute("border", "2");
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + tbl;
 		
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
