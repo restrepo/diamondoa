@@ -17,7 +17,7 @@
 	</p>
   
 	<h3>Results</h3>
-	<p>Only first 25 journals are shown</p>
+	<p>Only first 200 journals are shown</p>
 	<hr>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
@@ -63,7 +63,7 @@
 			tbl.appendChild(tblHead);
 	
 			// Use an API-REST call to get the `data` for the url parameter `concept` 
-			const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
+			const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0&per_page=200";
 			console.log(apirest);
 			fetch(apirest)
 			.then(response => response.json())
@@ -105,7 +105,11 @@
 				
 		      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
 		      		row.appendChild( insertCell(`${item.host_organization_name}`) );
-				row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+				if (item.country_code){
+					row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+				     } else {
+					row.appendChild( insertCell(""));
+				}
 				row.appendChild( insertCell(`${item.works_count}`) );
 				row.appendChild( insertCell(`${item.cited_by_count}`) );
 				row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
