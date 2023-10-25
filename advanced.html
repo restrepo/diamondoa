@@ -54,11 +54,11 @@
 			//row
 			const row1 = document.createElement("tr");
 	      		row1.appendChild( insertCell("<b>Journal</b>") );
-	      		row1.appendChild( insertCell("Publisher") );
-			row1.appendChild( insertCell("Country") );
-			row1.appendChild( insertCell("Articles") );
-			row1.appendChild( insertCell("Citations") );
-			row1.appendChild( insertCell("h-index") );
+	      		row1.appendChild( insertCell("<b>Publisher</b>") );
+			row1.appendChild( insertCell("<b>Country</b>") );
+			row1.appendChild( insertCell("<b>Articles</b>") );
+			row1.appendChild( insertCell("<b>Citations</b>") );
+			row1.appendChild( insertCell("<b>h-index</b>") );
 	    		tblHead.appendChild(row1);
 			//end row
 			tbl.appendChild(tblHead);
@@ -86,6 +86,7 @@
 			return tbl;
 		       };
 		function insertCell(ctext) {
+				//with HtmlNode instead of TextNode
 				const cell = document.createElement("td");
 				//const celltext = document.createTextNode(ctext);
 				var htmlNode = document.createElement('span');
@@ -103,7 +104,7 @@
 				//row
 				const row = document.createElement("tr");
 				
-		      		row.appendChild( insertCell(`<a href="google.com">${item.display_name}</a>`) );
+		      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
 		      		row.appendChild( insertCell(`${item.host_organization_name}`) );
 				row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
 				row.appendChild( insertCell(`${item.works_count}`) );
