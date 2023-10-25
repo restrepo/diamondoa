@@ -403,7 +403,13 @@
 		       //document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
 			//row
 			const row2 = document.createElement("tr");
-	      		row2.appendChild( insertCell(`<a href="">hola</a>${item.display_name}`) );
+			var createA = document.createElement('a');
+        		var createAText = document.createTextNode(theCounter);
+        		createA.setAttribute('href', "http://google.com");
+        		createA.appendChild(createAText);
+			
+	      		row2.appendChild( insertCell(createA.appendChild(createAText) ))
+				//`${item.display_name}`) );
 	      		row2.appendChild( insertCell(`${item.host_organization_name}`) );
 			row2.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
 			row2.appendChild( insertCell(`${item.works_count}`) );
