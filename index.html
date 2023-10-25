@@ -347,25 +347,18 @@
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
 		function insertCell(celltext) {
-			const cell11 = document.createElement("td");
-			const celltext11 = document.createTextNode("Journal");
-			cell11.appendChild(celltext11)
-			return cell11;
+			const cell = document.createElement("td");
+			const celltext = document.createTextNode(celltext);
+			cell.appendChild(celltext)
+			return cell;
 		};
 		
 		const tbl = document.createElement("table");
   		const tblBody = document.createElement("tbody");
 		//row
 		const row1 = document.createElement("tr");
-		//cell
       		row1.appendChild( insertCell("<b>Journal</b>")  );
-		//(cell11);
-		//end cell
-		//const cell12 = document.createElement("td");
-		//const celltext12 = document.createTextNode("Publisher");
-		//cell12.appendChild(celltext12);
       		row1.appendChild( insertCell("<b>Publisher</b>") );
-		//end cell
     		tblBody.appendChild(row1);
 		//end row
 
