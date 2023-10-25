@@ -105,7 +105,11 @@
 				
 		      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
 		      		row.appendChild( insertCell(`${item.host_organization_name}`) );
-				row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+				if (item.country_code){
+					row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+				     } else {
+					row.appendChild( insertCell(""));
+				}
 				row.appendChild( insertCell(`${item.works_count}`) );
 				row.appendChild( insertCell(`${item.cited_by_count}`) );
 				row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
