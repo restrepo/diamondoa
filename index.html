@@ -350,12 +350,12 @@
   		const tblBody = document.createElement("tbody");		
 		//row
 		const row1 = document.createElement("tr");
-      		row1.appendChild( insertCell("Journal") );
-      		row1.appendChild( insertCell("Publisher") );
-		row1.appendChild( insertCell("Country") );
-		row1.appendChild( insertCell("Articles") );
-		row1.appendChild( insertCell("Citations") );
-		row1.appendChild( insertCell("h-index") );
+	      	row1.appendChild( insertCell("<b>Journal</b>") );
+	      	row1.appendChild( insertCell("<b>Publisher</b>") );
+		row1.appendChild( insertCell("<b>Country</b>") );
+		row1.appendChild( insertCell("<b>Articles</b>") );
+		row1.appendChild( insertCell("<b>Citations</b>") );
+		row1.appendChild( insertCell("<b>h-index</b>") );
     		tblHead.appendChild(row1);
 		//end row
 		tbl.appendChild(tblHead);
@@ -382,12 +382,17 @@
 		//tbl.setAttribute("style", "width:100%");
 		return tbl;
 	       };
-	function insertCell(ctext) {
+		function insertCell(ctext) {
+			//with HtmlNode instead of TextNode
 			const cell = document.createElement("td");
-			const celltext = document.createTextNode(ctext);
-			cell.appendChild(celltext)
+			//const celltext = document.createTextNode(ctext);
+			var htmlNode = document.createElement('span');
+    			htmlNode.innerHTML = ctext;
+    			//htmlNode.className = 'treehtml';
+    			//htmlNode.setAttribute("style","font-weight: bold;");
+			cell.appendChild(htmlNode);
 			return cell;
-		};		
+		};				
 	// Create a function to display the json data dynamically on the webpage
 	function jsonList(item,tblBody) {
 			//https://bobbyhadz.com/blog/javascript-get-country-name-from-country-code
@@ -396,7 +401,7 @@
 			//row
 			const row = document.createElement("tr");
 			
-	      		row.appendChild( insertCell(`${item.display_name}`) );
+	      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
 	      		row.appendChild( insertCell(`${item.host_organization_name}`) );
 			row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
 			row.appendChild( insertCell(`${item.works_count}`) );
@@ -410,7 +415,8 @@
 	<hr>
 	<h3>Advanced</h3>
 	<p>
-	  Visit the following link <a href="https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049"><code>https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049</code></a>: Change the OpenAlex concept identification at the end of the URL by one from the 
+	  Visit the following link <a href="https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049"><code>https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049</code></a>: 
+	  Change the <a href="https://docs.openalex.org">OpenAlex</a> <a href="https://docs.openalex.org/api-entities/concepts/concept-object#id">concept identifier</a> at the end of the URL by one of the 65 thousand from the 
 	  <a href="https://docs.google.com/spreadsheets/d/1LBFHjPt4rj_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811">official spreadsheet here<a>
 	  or edit the URL at the end: from the <a href="https://api.openalex.org/concepts?filter=display_name.search:concept_here">OpenAlex API</a>
 	  (or <a href="https://api.openalex.org/concepts?filter=level:0">by level</a>)
