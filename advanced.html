@@ -21,6 +21,7 @@
 	<hr>
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
+	<div id="cell"></div>		  
 	<script>		
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
@@ -86,8 +87,9 @@
 		       };
 		function insertCell(ctext) {
 				const cell = document.createElement("td");
-				const celltext = document.createTextNode(ctext);
-				cell.appendChild(celltext)
+				//const celltext = document.createTextNode(ctext);
+				document.querySelector("#debug").innerHTML=ctext;
+				cell.appendChild(document.querySelector("#debug").innerHTML);
 				return cell;
 			};		
 		// Create a function to display the json data dynamically on the webpage
