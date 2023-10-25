@@ -346,6 +346,23 @@
 		console.log(formText);
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
+		const tbl = document.createElement("table");
+  		const tblBody = document.createElement("tbody");
+		const row = document.createElement("tr");
+		const cell = document.createElement("td");
+      		const cellText = document.createTextNode(`cell in row`);
+		cell.appendChild(cellText);
+      		row.appendChild(cell);
+    		// add the row to the end of the table body
+    		tblBody.appendChild(row);
+  		// put the <tbody> in the <table>
+  		tbl.appendChild(tblBody);
+  		// appends <table> into <body>
+  		document.body.appendChild(tbl);
+  		// sets the border attribute of tbl to '2'
+  		tbl.setAttribute("border", "2");
+
+		
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + '<table border="1" style="width:100%">';
 		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<tr><th>Journal</th><th>Publisher</th><th>Country code</th><th>Articles</th><th>Citations</th><th>h-index</th> </tr>";
 		
