@@ -22,6 +22,10 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerText` in the script -->
 	<div id="debug"></div>
 	<script>
+		//https://bobbyhadz.com/blog/javascript-get-country-name-from-country-code
+		const regionNames = new Intl.DisplayNames(
+		  ['en'], {type: 'region'}
+		);		
 		// **** BEGIN: Get the URL parameter: `concept` ****
 		// https://www.sitepoint.com/get-url-parameters-with-javascript/
 		const queryString = window.location.search;
@@ -39,6 +43,28 @@
 		// **** END: Get the URL parameter: `concept`   ****
 
                 //*** CODE IS THE SAME FROM HERE: Copy and Paste from index.html    
+		function insertCell(ctext) {
+			const cell = document.createElement("td");
+			const celltext = document.createTextNode(ctext);
+			cell.appendChild(celltext)
+			return cell;
+		};
+		
+		const tbl = document.createElement("table");
+  		const tblHead = document.createElement("thead");		
+  		const tblBody = document.createElement("tbody");		
+		//row
+		const row1 = document.createElement("tr");
+      		row1.appendChild( insertCell("Journal") );
+      		row1.appendChild( insertCell("Publisher") );
+		row1.appendChild( insertCell("Country") );
+		row1.appendChild( insertCell("Articles") );
+		row1.appendChild( insertCell("Citations") );
+		row1.appendChild( insertCell("h-index") );
+    		tblHead.appendChild(row1);
+		//end row
+		tbl.appendChild(tblHead);
+
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
 		console.log(apirest);
@@ -57,27 +83,32 @@
 		        jsonList(el); // calling jsonList function
 		      });
 		    });
-		//});
-		//.then(data => {
-		//	console.log(data.results[0]) <!-- This is to debug -->
-		//	// "works_count": 64913, "cited_by_count": 2107089, "summary_stats": {"h_index": 393}
-		//	document.querySelector("#debug").innerText = "Journal: " + data.results[0].display_name + "; Publisher: " + data.results[0].host_organization_name <!-- Get metadata of the selected concept id -->
-		//})
-
 
 		// Create a function to display the json data dynamically on the webpage
 		function jsonList(item) {
-		  // Create a new div element dynamically
-		  //const div = document.createElement("div");
-		  // get the required details from the local.json file to the div element using innerHTML
-		  //div.innerHTML = `
-		   document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  Journal:  ${item.display_name}, Publisher: ${item.host_organization_name}, Country code: ${item.country_code}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index}<br>`; 	
-		  //`Journal: ${item.display_name}, Publisher: ${item.host_organization_name}, Articles: ${item.works_count}, Citations: ${item.cited_by_count},  h-index: ${item.summary_stats.h_index},`;
-		  // attach the newly created div element to the original div element, in this case to the class '.output'
-		  //output.append(div);
-		  // Add styling to the displayed content
-		  //div.classList.add("active");
-		}
+		       //document.querySelector("#debug").innerHTML = `${document.querySelector("#debug").innerHTML}  <tr><th>${item.display_name}</th> <th>${item.host_organization_name}</th> <th>${item.country_code}</th> <th>${item.works_count}</th> <th>${item.cited_by_count}</th>  <th>${item.summary_stats.h_index}</th></tr>`; 	
+			//row
+			const row2 = document.createElement("tr");
+			
+	      		row2.appendChild( insertCell(`${item.display_name}`) );
+	      		row2.appendChild( insertCell(`${item.host_organization_name}`) );
+			row2.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+			row2.appendChild( insertCell(`${item.works_count}`) );
+			row2.appendChild( insertCell(`${item.cited_by_count}`) );
+			row2.appendChild( insertCell(`${item.summary_stats.h_index}`) );
+			tblBody.appendChild(row2);
+			//end row
+			
+		};
+		
+                // put the <tbody> in the <table>
+  		tbl.appendChild(tblBody);
+  		// appends <table> into <body>
+		//https://stackoverflow.com/a/7018615/2268280
+  		document.querySelector("#debug").appendChild(tbl);
+  		// sets the border attribute of tbl to '2'
+  		tbl.setAttribute("border", "1");
+		//tbl.setAttribute("style", "width:100%");
 	</script>
 	<hr>
 	<h3><a href="https://restrepo.github.io/diamondoa">Search with level-one OpenAlex concepts</a></h3>
