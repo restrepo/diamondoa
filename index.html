@@ -358,7 +358,8 @@
 		};
 		
 		const tbl = document.createElement("table");
-  		const tblBody = document.createElement("tbody");
+  		const tblHead = document.createElement("thead");		
+  		const tblBody = document.createElement("tbody");		
 		//row
 		const row1 = document.createElement("tr");
       		row1.appendChild( insertCell("Journal")  );
@@ -367,8 +368,10 @@
 		row1.appendChild( insertCell("Articles") );
 		row1.appendChild( insertCell("Citations") );
 		row1.appendChild( insertCell("h-index") );
-    		tblBody.appendChild(row1);
+    		tblHead.appendChild(row1);
 		//end row
+		tbl.appendChild(tblHead);
+
 
 		
   		
@@ -419,7 +422,7 @@
   		document.querySelector("#debug").appendChild(tbl);
   		// sets the border attribute of tbl to '2'
   		tbl.setAttribute("border", "1");
-		tbl.setAttribute("style", "width:100%");		
+		//tbl.setAttribute("style", "width:100%");		
 	};
 	</script>
 	<hr>
