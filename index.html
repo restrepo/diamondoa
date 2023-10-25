@@ -349,14 +349,10 @@
 		const tbl = document.createElement("table");
   		const tblBody = document.createElement("tbody");
 		//row
-		const row = document.createElement("tr");
-		//cell
-		const cell = document.createElement("td");
-      		const cellText = document.createTextNode(`Journal`);
-		cell.appendChild(cellText);
-      		row.appendChild(cell);
+		cell.appendChild( document.createTextNode(`Journal`)    );
+      		row.appendChild( document.createElement("td")  );
     		// add the row to the end of the table body
-    		tblBody.appendChild(row);
+    		tblBody.appendChild(document.createElement("tr"));
   		// put the <tbody> in the <table>
   		tbl.appendChild(tblBody);
   		// appends <table> into <body>
