@@ -63,7 +63,7 @@
 			tbl.appendChild(tblHead);
 	
 			// Use an API-REST call to get the `data` for the url parameter `concept` 
-			const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0";
+			const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0&per_page=200";
 			console.log(apirest);
 			fetch(apirest)
 			.then(response => response.json())
