@@ -346,19 +346,26 @@
 		console.log(formText);
 		document.querySelector("#debug").innerHTML = "Diamond open access journal for: " + formText + "<br><br>";
 
+		function insertCell(celltext) {
+			const cell11 = document.createElement("td");
+			const celltext11 = document.createTextNode("Journal");
+			cell11.appendChild(celltext11)
+			return cell1;
+		};
+		
 		const tbl = document.createElement("table");
   		const tblBody = document.createElement("tbody");
 		//row
 		const row1 = document.createElement("tr");
 		//cell
 		const cell11 = document.createElement("td");
-		const celltext11 = document.createTextNode("Journal")
-		cell11.appendChild(celltext11)
+		const celltext11 = document.createTextNode("Journal");
+		cell11.appendChild(celltext11);
       		row1.appendChild(cell11);
 		//end cell
 		const cell12 = document.createElement("td");
-		const celltext12 = document.createTextNode("Publisher")
-		cell12.appendChild(celltext12)
+		const celltext12 = document.createTextNode("Publisher");
+		cell12.appendChild(celltext12);
       		row1.appendChild(cell12);
 		//end cell
     		tblBody.appendChild(row1);
