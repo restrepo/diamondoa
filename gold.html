@@ -351,7 +351,7 @@
 	var oa = "Diamond open access journals for: ";
 	var maxoa = "";
 	if (apc != "1"){
-           oa = "Gold open access journals with maximum APC of" + apc + "for: ";		
+           oa = "Gold open access journals with maximum APC of " + apc + " for: ...";		
 	};
 	
 	document.querySelector("#debug").innerHTML = oa;
@@ -368,7 +368,7 @@
 		// Obtain the text of the selected option:
 		var formText = sel.options[sel.selectedIndex].text;
 		console.log(formText);
-		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + formText + "<br><br>";
+		document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML.replace("...","") + formText + "<br><br>";
 		
 		tbl=buildTable(concept);
                 
