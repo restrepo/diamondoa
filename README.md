@@ -17,7 +17,7 @@ To check the `console.log` in the rendered page in the browser, in Chrome: right
 Based on https://github.com/AlfaimaSB/RetrieveFromAcademia
 
 ## Tools
-* OpenAlex AOI help: https://api.openalex.org/sources?filter=need.help:true
+* OpenAlex API help: https://api.openalex.org/sources?filter=need.help:true
 * DOAJ API example: https://doaj.org/api/v2/search/journals/issn:2504-0537
 
 
