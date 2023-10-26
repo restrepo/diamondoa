@@ -8,7 +8,7 @@
 <body>
 	<h2>Diamond or gold open access journals</h2>
 	<p>Search <a href="https://en.wikipedia.org/wiki/Diamond_open_access">diamond or gold open access</a> 
-	<form action="">
+	<form method="post" action="" onSubmit="return saveComment();">
     	Maxium APC: <input type="text" id="apc" name="apc" required minlength="1" maxlength="8" size="10" placeholder="0" /> USD (Default is 0 USD for diamond open access journals)<br/>
     	<input type="submit" value="Submit"> 
 	<br/><br/>	
@@ -330,6 +330,18 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
 	<div id="debug"></div>
 	<script>
+	document.getElementById("cmtx_comment").value = localStorage.getItem("comment");
+
+	function saveComment() {
+	    var comment = document.getElementById("cmtx_comment").value;
+	    if (comment == "") {
+	        return false;
+	    }
+		
+	    location.reload();
+	    return false;
+	    //return true;
+	};
 	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
 	function selectedFunction(sel) {
 		var concept = sel.options[sel.selectedIndex].value;
