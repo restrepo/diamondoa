@@ -368,8 +368,24 @@
 		//end row
 		tbl.appendChild(tblHead);
 
+		// **** BEGIN: Get the URL parameter: `concept` ****
+		// https://www.sitepoint.com/get-url-parameters-with-javascript/
+		const queryString = window.location.search;
+		console.log(queryString);
+		// ?product=shirt&color=blue&newuser&size=m
+		const urlParams = new URLSearchParams(queryString);
+		const apc = urlParams.get('apc');
+
+		console.log("apc: " + apc);
+		if (apc) {
+			apc="<" + apc;
+		} else {
+			apc="0";
+		};
+		// C109214941 or ... for example
+		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
-		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0&per_page=200";
+		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:" + apc  + "&per_page=200";
 		console.log(apirest);
 		fetch(apirest)
 		.then(response => response.json())
