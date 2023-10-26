@@ -374,7 +374,7 @@
 		console.log(queryString);
 		// ?product=shirt&color=blue&newuser&size=m
 		const urlParams = new URLSearchParams(queryString);
-		const apc = urlParams.get('apc');
+		var apc = urlParams.get('apc');
 
 		console.log("apc: " + apc);
 		if (apc) {
