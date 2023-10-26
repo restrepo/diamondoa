@@ -377,15 +377,13 @@
 		var apc = urlParams.get('apc');
 
 		console.log("apc: " + apc);
-		if (apc) {
-			apc="<" + apc;
-		} else {
-			apc="0";
+		if (!apc) {
+			apc="1";
 		};
 		// C109214941 or ... for example
 		// **** END: Get the URL parameter: `concept`   ****
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
-		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:" + apc  + "&per_page=200";
+		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:<" + apc  + "&per_page=200";
 		console.log(apirest);
 		fetch(apirest)
 		.then(response => response.json())
