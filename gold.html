@@ -333,33 +333,35 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
 	<div id="debug"></div>
 	<script>
-	// **** BEGIN: Get the URL parameter: `concept` ****
-	// https://www.sitepoint.com/get-url-parameters-with-javascript/
-	const queryString = window.location.search;
-	console.log(queryString);
-	// ?product=shirt&color=blue&newuser&size=m
-	const urlParams = new URLSearchParams(queryString);
-	var apc = urlParams.get('apc');
-	
 
-	console.log("apc: " + apc);
-	if (!apc) {
-		apc="1";
-	};
-        // TODO: else add 1 -> "200" to "201"
-	if ( apc == "0" ) {
-		apc="1";
-	};
-
-	var oa = "Diamond open access journals for: ";
-	var maxoa = "";
-	if (apc != "1"){
-           oa = "Diamond or gold open access journals with maximum APC of " + apc + " for: ...";		
-	};
-	
-	document.querySelector("#debug").innerHTML = oa;
 	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
 	function selectedFunction(sel) {
+		// **** BEGIN: Get the URL parameter: `concept` ****
+		// https://www.sitepoint.com/get-url-parameters-with-javascript/
+		const queryString = window.location.search;
+		console.log(queryString);
+		// ?product=shirt&color=blue&newuser&size=m
+		const urlParams = new URLSearchParams(queryString);
+		var apc = urlParams.get('apc');
+		
+	
+		console.log("apc: " + apc);
+		if (!apc) {
+			apc="1";
+		};
+	        // TODO: else add 1 -> "200" to "201"
+		if ( apc == "0" ) {
+			apc="1";
+		};
+	
+		var oa = "Diamond open access journals for: ";
+		var maxoa = "";
+		if (apc != "1"){
+	           oa = "Diamond or gold open access journals with maximum APC of " + apc + " for: ...";		
+		};
+	
+		document.querySelector("#debug").innerHTML = oa;
+		
 		var concept = sel.options[sel.selectedIndex].value;
 		console.log("concept: " + concept);
 		if (!concept) {
