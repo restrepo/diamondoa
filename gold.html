@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diamond open access</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<h2>Diamond open access journals</h2>
+	<p>Search <a href="https://en.wikipedia.org/wiki/Diamond_open_access">Diamond open access</a> 
+		journals for <a href="https://github.com/restrepo/diamond/blob/main/static/data/level_1_concepts.csv">level-one</a>
+		<a href="https://openalex.org/">OpenAlex</a> <a href="https://docs.openalex.org/api-entities/concepts">concepts</a>: </p>
+  <form action="">
+    <input type="text" id="apc" name="apc" required minlength="4" maxlength="8" size="10" />
+    <input type="submit" value="Submit"> 
+  </form>
+	<form action="">
+	  <!-- <p><label for="concept">Select a level-one OpenAlex concept:</label></p> -->
+	  <select name="concept" id="concept" onChange="selectedFunction(this);">
+		<option value=""> Select level-one OpenAlex concept</option>
+	        <option value="C124952713"> Art → Literature </option>
+		<option value="C153349607"> Art → Visual arts </option>
+		<option value="C52119013"> Art, History → Art history </option>
+		<option value="C74916050"> Art, History → Classics </option>
+		<option value="C107038049"> Art, Philosophy → Aesthetics </option>
+		<option value="C15708023"> Art, Philosophy → Humanities </option>
+		<option value="C189807693"> Art, Philosophy → Humanities → American studies </option>		  
+		<option value="C6557445"> Biology → Agronomy </option>
+		<option value="C140793950"> Biology → Animal science </option>
+		<option value="C60644358"> Biology → Bioinformatics </option>
+		<option value="C186060115"> Biology → Biological system </option>
+		<option value="C12554922"> Biology → Biophysics </option>
+		<option value="C150903083"> Biology → Biotechnology </option>
+		<option value="C59822182"> Biology → Botany </option>
+		<option value="C95444343"> Biology → Cell biology </option>
+		<option value="C70721500"> Biology → Computational biology </option>
+		<option value="C18903297"> Biology → Ecology </option>
+		<option value="C78458016"> Biology → Evolutionary biology </option>
+		<option value="C505870484"> Biology → Fishery </option>
+		<option value="C54355233"> Biology → Genetics </option>
+		<option value="C144027150"> Biology → Horticulture </option>
+		<option value="C89423630"> Biology → Microbiology </option>
+		<option value="C153911025"> Biology → Molecular biology </option>
+		<option value="C33070731"> Biology → Toxicology </option>
+		<option value="C90856448"> Biology → Zoology </option>
+		<option value="C55493867"> Biology, Chemistry → Biochemistry </option>
+		<option value="C31903555"> Biology, Chemistry → Food science </option>
+		<option value="C37621935"> Biology, Environmental science → Agricultural science </option>
+		<option value="C54286561"> Biology, Environmental science → Agroforestry </option>
+		<option value="C151730666"> Biology, Geology → Paleontology </option>
+		<option value="C105702510"> Biology, Medicine → Anatomy </option>
+		<option value="C502942594"> Biology, Medicine → Cancer research </option>
+		<option value="C134018914"> Biology, Medicine → Endocrinology </option>
+		<option value="C203014093"> Biology, Medicine → Immunology </option>
+		<option value="C98274493"> Biology, Medicine → Pharmacology </option>
+		<option value="C42407357"> Biology, Medicine → Physiology </option>
+		<option value="C159047783"> Biology, Medicine → Virology </option>
+		<option value="C87355193"> Biology, Physics → Astrobiology </option>
+		<option value="C169760540"> Biology, Psychology → Neuroscience </option>
+		<option value="C112698675"> Business → Advertising </option>
+		<option value="C178550888"> Business → Business administration </option>
+		<option value="C162853370"> Business → Marketing </option>
+		<option value="C121955636"> Business, Economics → Accounting </option>
+		<option value="C162118730"> Business, Economics → Actuarial science </option>
+		<option value="C54750564"> Business, Economics → Commerce </option>
+		<option value="C105639569"> Business, Economics → Economic policy </option>
+		<option value="C10138342"> Business, Economics → Finance </option>
+		<option value="C73283319"> Business, Economics → Financial system </option>
+		<option value="C40700"> Business, Economics → Industrial organization </option>
+		<option value="C155202549"> Business, Economics → International trade </option>
+		<option value="C195094911"> Business, Engineering → Process management </option>
+		<option value="C112930515"> Business, Medicine → Risk analysis (engineering) </option>
+		<option value="C43617362"> Chemistry → Chromatography </option>
+		<option value="C21951064"> Chemistry → Combinatorial chemistry </option>
+		<option value="C147597530"> Chemistry → Computational chemistry </option>
+		<option value="C8010536"> Chemistry → Crystallography </option>
+		<option value="C107872376"> Chemistry → Environmental chemistry </option>
+		<option value="C179104552"> Chemistry → Inorganic chemistry </option>
+		<option value="C155647269"> Chemistry → Medicinal chemistry </option>
+		<option value="C13965031"> Chemistry → Nuclear chemistry </option>
+		<option value="C178790620"> Chemistry → Organic chemistry </option>
+		<option value="C75473681"> Chemistry → Photochemistry </option>
+		<option value="C147789679"> Chemistry → Physical chemistry </option>
+		<option value="C177322064"> Chemistry → Radiochemistry </option>
+		<option value="C71240020"> Chemistry → Stereochemistry </option>
+		<option value="C199289684"> Chemistry, Geology → Mineralogy </option>
+		<option value="C188027245"> Chemistry, Materials science → Polymer chemistry </option>
+		<option value="C126348684"> Chemistry, Materials science → Polymer science </option>
+		<option value="C159467904"> Chemistry, Physics → Chemical physics </option>
+		<option value="C41999313"> Chemistry, Physics → Molecular physics </option>
+		<option value="C154945302"> Computer science → Artificial intelligence </option>
+		<option value="C118524514"> Computer science → Computer architecture </option>
+		<option value="C121684516"> Computer science → Computer graphics (images) </option>
+		<option value="C9390403"> Computer science → Computer hardware </option>
+		<option value="C31258907"> Computer science → Computer network </option>
+		<option value="C38652104"> Computer science → Computer security </option>
+		<option value="C31972630"> Computer science → Computer vision </option>
+		<option value="C124101348"> Computer science → Data mining </option>
+		<option value="C2522767166"> Computer science → Data science </option>
+		<option value="C77088390"> Computer science → Database </option>
+		<option value="C120314980"> Computer science → Distributed computing </option>
+		<option value="C107457646"> Computer science → Human‚Äìcomputer interaction </option>
+		<option value="C23123220"> Computer science → Information retrieval </option>
+		<option value="C108827166"> Computer science → Internet privacy </option>
+		<option value="C56739046"> Computer science → Knowledge management </option>
+		<option value="C161191863"> Computer science → Library science </option>
+		<option value="C119857082"> Computer science → Machine learning </option>
+		<option value="C49774154"> Computer science → Multimedia </option>
+		<option value="C204321447"> Computer science → Natural language processing </option>
+		<option value="C111919701"> Computer science → Operating system </option>
+		<option value="C173608175"> Computer science → Parallel computing </option>
+		<option value="C199360897"> Computer science → Programming language </option>
+		<option value="C79403827"> Computer science → Real-time computing </option>
+		<option value="C28490314"> Computer science → Speech recognition </option>
+		<option value="C80444323"> Computer science → Theoretical computer science </option>
+		<option value="C136764020"> Computer science → World Wide Web </option>
+		<option value="C113775141"> Computer science, Engineering → Computer engineering </option>
+		<option value="C149635348"> Computer science, Engineering → Embedded system </option>
+		<option value="C44154836"> Computer science, Engineering → Simulation </option>
+		<option value="C115903868"> Computer science, Engineering → Software engineering </option>
+		<option value="C76155785"> Computer science, Engineering → Telecommunications </option>
+		<option value="C11413529"> Computer science, Mathematics → Algorithm </option>
+		<option value="C459310"> Computer science, Mathematics → Computational science </option>
+		<option value="C48824518"> Economics → Agricultural economics </option>
+		<option value="C167562979"> Economics → Classical economics </option>
+		<option value="C4249254"> Economics → Demographic economics </option>
+		<option value="C47768531"> Economics → Development economics </option>
+		<option value="C50522688"> Economics → Economic growth </option>
+		<option value="C74363100"> Economics → Economic system </option>
+		<option value="C136264566"> Economics → Economy </option>
+		<option value="C134560507"> Economics → Environmental economics </option>
+		<option value="C106159729"> Economics → Financial economics </option>
+		<option value="C18547055"> Economics → International economics </option>
+		<option value="C165556158"> Economics → Keynesian economics </option>
+		<option value="C145236788"> Economics → Labour economics </option>
+		<option value="C139719470"> Economics → Macroeconomics </option>
+		<option value="C187736073"> Economics → Management </option>
+		<option value="C34447519"> Economics → Market economy </option>
+		<option value="C175444787"> Economics → Microeconomics </option>
+		<option value="C556758197"> Economics → Monetary economics </option>
+		<option value="C175605778"> Economics → Natural resource economics </option>
+		<option value="C133425853"> Economics → Neoclassical economics </option>
+		<option value="C118084267"> Economics → Positive economics </option>
+		<option value="C100001284"> Economics → Public economics </option>
+		<option value="C549774020"> Economics → Welfare economics </option>
+		<option value="C539667460"> Economics, Engineering → Management science </option>
+		<option value="C21547014"> Economics, Engineering → Operations management </option>
+		<option value="C107826830"> Economics, Environmental science → Environmental resource management </option>
+		<option value="C26271046"> Economics, Geography → Economic geography </option>
+		<option value="C6303427"> Economics, History → Economic history </option>
+		<option value="C149782125"> Economics, Mathematics → Econometrics </option>
+		<option value="C144237770"> Economics, Mathematics → Mathematical economics </option>
+		<option value="C190253527"> Economics, Sociology → Law and economics </option>
+		<option value="C138921699"> Economics, Sociology → Political economy </option>
+		<option value="C45355965"> Economics, Sociology → Socioeconomics </option>
+		<option value="C178802073"> Engineering → Aeronautics </option>
+		<option value="C146978453"> Engineering → Aerospace engineering </option>
+		<option value="C88463610"> Engineering → Agricultural engineering </option>
+		<option value="C170154142"> Engineering → Architectural engineering </option>
+		<option value="C171146098"> Engineering → Automotive engineering </option>
+		<option value="C183696295"> Engineering → Biochemical engineering </option>
+		<option value="C42360764"> Engineering → Chemical engineering </option>
+		<option value="C147176958"> Engineering → Civil engineering </option>
+		<option value="C107053488"> Engineering → Construction engineering </option>
+		<option value="C133731056"> Engineering → Control engineering </option>
+		<option value="C119599485"> Engineering → Electrical engineering </option>
+		<option value="C24326235"> Engineering → Electronic engineering </option>
+		<option value="C199639397"> Engineering → Engineering drawing </option>
+		<option value="C55587333"> Engineering → Engineering ethics </option>
+		<option value="C110354214"> Engineering → Engineering management </option>
+		<option value="C77595967"> Engineering → Forensic engineering </option>
+		<option value="C13736549"> Engineering → Industrial engineering </option>
+		<option value="C117671659"> Engineering → Manufacturing engineering </option>
+		<option value="C199104240"> Engineering → Marine engineering </option>
+		<option value="C78519656"> Engineering → Mechanical engineering </option>
+		<option value="C116915560"> Engineering → Nuclear engineering </option>
+		<option value="C21880701"> Engineering → Process engineering </option>
+		<option value="C528095902"> Engineering → Pulp and paper industry </option>
+		<option value="C200601418"> Engineering → Reliability engineering </option>
+		<option value="C66938386"> Engineering → Structural engineering </option>
+		<option value="C201995342"> Engineering → Systems engineering </option>
+		<option value="C22212356"> Engineering → Transport engineering </option>
+		<option value="C548081761"> Engineering → Waste management </option>
+		<option value="C87717796"> Engineering, Environmental science → Environmental engineering </option>
+		<option value="C187320778"> Engineering, Geology → Geotechnical engineering </option>
+		<option value="C16674752"> Engineering, Geology → Mining engineering </option>
+		<option value="C78762247"> Engineering, Geology → Petroleum engineering </option>
+		<option value="C42475967"> Engineering, Mathematics → Operations research </option>
+		<option value="C136229726"> Engineering, Medicine → Biomedical engineering </option>
+		<option value="C61696701"> Engineering, Physics → Engineering physics </option>
+		<option value="C524765639"> Environmental science → Water resource management </option>
+		<option value="C91375879"> Environmental science, Geography → Environmental planning </option>
+		<option value="C526734887"> Environmental science, Geography → Environmental protection </option>
+		<option value="C159390177"> Environmental science, Geology → Soil science </option>
+		<option value="C58640448"> Geography → Cartography </option>
+		<option value="C97137747"> Geography → Forestry </option>
+		<option value="C100970517"> Geography → Physical geography </option>
+		<option value="C13280743"> Geography, Geology → Geodesy </option>
+		<option value="C62649853"> Geography, Geology → Remote sensing </option>
+		<option value="C166957645"> Geography, History → Archaeology </option>
+		<option value="C153294291"> Geography, Physics → Meteorology </option>
+		<option value="C148383697"> Geography, Sociology → Regional science </option>
+		<option value="C49204034"> Geology → Climatology </option>
+		<option value="C1965285"> Geology → Earth science </option>
+		<option value="C17409809"> Geology → Geochemistry </option>
+		<option value="C114793014"> Geology → Geomorphology </option>
+		<option value="C111368507"> Geology → Oceanography </option>
+		<option value="C5900021"> Geology → Petrology </option>
+		<option value="C165205528"> Geology → Seismology </option>
+		<option value="C91586092"> Geology, Physics → Atmospheric sciences </option>
+		<option value="C8058405"> Geology, Physics → Geophysics </option>
+		<option value="C195244886"> History → Ancient history </option>
+		<option value="C53553401"> History → Genealogy </option>
+		<option value="C2549261"> History, Sociology → Ethnology </option>
+		<option value="C159985019"> Materials science → Composite material </option>
+		<option value="C191897082"> Materials science → Metallurgy </option>
+		<option value="C171250308"> Materials science → Nanotechnology </option>
+		<option value="C49040817"> Materials science, Physics → Optoelectronics </option>
+		<option value="C28826006"> Mathematics → Applied mathematics </option>
+		<option value="C94375191"> Mathematics → Arithmetic </option>
+		<option value="C114614502"> Mathematics → Combinatorics </option>
+		<option value="C118615104"> Mathematics → Discrete mathematics </option>
+		<option value="C2524010"> Mathematics → Geometry </option>
+		<option value="C134306372"> Mathematics → Mathematical analysis </option>
+		<option value="C126255220"> Mathematics → Mathematical optimization </option>
+		<option value="C202444582"> Mathematics → Pure mathematics </option>
+		<option value="C105795698"> Mathematics → Statistics </option>
+		<option value="C37914503"> Mathematics, Physics → Mathematical physics </option>
+		<option value="C145420912"> Mathematics, Psychology → Mathematics education </option>
+		<option value="C16685009"> Medicine → Andrology </option>
+		<option value="C42219234"> Medicine → Anesthesia </option>
+		<option value="C548259974"> Medicine → Audiology </option>
+		<option value="C164705383"> Medicine → Cardiology </option>
+		<option value="C199343813"> Medicine → Dentistry </option>
+		<option value="C16005928"> Medicine → Dermatology </option>
+		<option value="C194828623"> Medicine → Emergency medicine </option>
+		<option value="C99454951"> Medicine → Environmental health </option>
+		<option value="C512399662"> Medicine → Family medicine </option>
+		<option value="C90924648"> Medicine → Gastroenterology </option>
+		<option value="C61434518"> Medicine → General surgery </option>
+		<option value="C74909509"> Medicine → Gerontology </option>
+		<option value="C29456083"> Medicine → Gynecology </option>
+		<option value="C177713679"> Medicine → Intensive care medicine </option>
+		<option value="C126322002"> Medicine → Internal medicine </option>
+		<option value="C509550671"> Medicine → Medical education </option>
+		<option value="C545542383"> Medicine → Medical emergency </option>
+		<option value="C2989005"> Medicine → Nuclear medicine </option>
+		<option value="C159110408"> Medicine → Nursing </option>
+		<option value="C131872663"> Medicine → Obstetrics </option>
+		<option value="C143998085"> Medicine → Oncology </option>
+		<option value="C118487528"> Medicine → Ophthalmology </option>
+		<option value="C119767625"> Medicine → Optometry </option>
+		<option value="C29694066"> Medicine → Orthodontics </option>
+		<option value="C142724271"> Medicine → Pathology </option>
+		<option value="C187212893"> Medicine → Pediatrics </option>
+		<option value="C99508421"> Medicine → Physical medicine and rehabilitation </option>
+		<option value="C1862650"> Medicine → Physical therapy </option>
+		<option value="C126838900"> Medicine → Radiology </option>
+		<option value="C141071460"> Medicine → Surgery </option>
+		<option value="C556039675"> Medicine → Traditional medicine </option>
+		<option value="C126894567"> Medicine → Urology </option>
+		<option value="C42972112"> Medicine → Veterinary medicine </option>
+		<option value="C19527891"> Medicine, Physics → Medical physics </option>
+		<option value="C70410870"> Medicine, Psychology → Clinical psychology </option>
+		<option value="C118552586"> Medicine, Psychology → Psychiatry </option>
+		<option value="C95124753"> Philosophy → Environmental ethics </option>
+		<option value="C111472728"> Philosophy → Epistemology </option>
+		<option value="C41895202"> Philosophy → Linguistics </option>
+		<option value="C24667770"> Philosophy → Religious studies </option>
+		<option value="C27206212"> Philosophy → Theology </option>
+		<option value="C24890656"> Physics → Acoustics </option>
+		<option value="C1276947"> Physics → Astronomy </option>
+		<option value="C44870925"> Physics → Astrophysics </option>
+		<option value="C184779094"> Physics → Atomic physics </option>
+		<option value="C74650414"> Physics → Classical mechanics </option>
+		<option value="C30475298"> Physics → Computational physics </option>
+		<option value="C26873012"> Physics → Condensed matter physics </option>
+		<option value="C57879066"> Physics → Mechanics </option>
+		<option value="C46141821"> Physics → Nuclear magnetic resonance </option>
+		<option value="C185544564"> Physics → Nuclear physics </option>
+		<option value="C120665830"> Physics → Optics </option>
+		<option value="C109214941"> Physics → Particle physics </option>
+		<option value="C3079626"> Physics → Quantum electrodynamics </option>
+		<option value="C62520636"> Physics → Quantum mechanics </option>
+		<option value="C121864883"> Physics → Statistical physics </option>
+		<option value="C33332235"> Physics → Theoretical physics </option>
+		<option value="C97355855"> Physics → Thermodynamics </option>
+		<option value="C199539241"> Political science → Law </option>
+		<option value="C3116431"> Political science → Public administration </option>
+		<option value="C39549134"> Political science → Public relations </option>
+		<option value="C75630572"> Psychology → Applied psychology </option>
+		<option value="C180747234"> Psychology → Cognitive psychology </option>
+		<option value="C188147891"> Psychology → Cognitive science </option>
+		<option value="C138496976"> Psychology → Developmental psychology </option>
+		<option value="C11171543"> Psychology → Psychoanalysis </option>
+		<option value="C542102704"> Psychology → Psychotherapist </option>
+		<option value="C77805123"> Psychology → Social psychology </option>
+		<option value="C46312422"> Psychology, Sociology → Communication </option>
+		<option value="C73484699"> Psychology, Sociology → Criminology </option>
+		<option value="C19417346"> Psychology, Sociology → Pedagogy </option>
+		<option value="C19165224"> Sociology → Anthropology </option>
+		<option value="C149923435"> Sociology → Demography </option>
+		<option value="C107993555"> Sociology → Gender studies </option>
+		<option value="C29595303"> Sociology → Media studies </option>
+		<option value="C36289849"> Sociology → Social science </option>
+		<option value="68062652">  Sociology → Social Science → Social capital </option>
+		<option value="198293453"> Sociology → Social Science → Human science </option>
+		<option value="525823164"> Sociology → Social Science → Scientometrics </option>
+		<option value="2778219744"> Sociology → Social Science → History and philosophy of science </option>
+		<option value="23528732">  Sociology → Social Science → Science, technology and society </option>
+		<option value="207873717"> Sociology → Social Science → Sociology of knowledge </option>
+		<option value="158561935"> Sociology → Social Science → Peace and conflict studies </option>
+		<option value="57494143">  Sociology → Social Science → Social statistics </option>
+		<option value="169175208"> Sociology → Social Science → Science studies </option>
+		<option value="126349790"> Sociology → Social Science → Computational sociology </option>
+		<option value="2778621906"> Sociology → Social Science → Technology and society </option>
+		<option value="185774338"> Sociology → Social Science → Communication sciences </option>
+		<option value="15664550">  Sociology → Social Science → History of science and technology </option>		  
+	  </select>
+	  <!-- <br/><br/>
+	  <input type="submit" value="Submit"> -->
+	</form>
+
+	<h3>Results</h3>
+	<p>Only first 200 journals are shown</p>
+	<hr>
+	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
+	<div id="debug"></div>
+	<script>
+	// https://stackoverflow.com/a/14976638/2268280 → Get selected option text with JavaScript
+	function selectedFunction(sel) {
+		var concept = sel.options[sel.selectedIndex].value;
+		console.log("concept: " + concept);
+		if (!concept) {
+			console.log("Not concept");
+			throw 'bye';
+		}			
+		// C109214941 or ... for example
+
+		// Obtain the text of the selected option:
+		var formText = sel.options[sel.selectedIndex].text;
+		console.log(formText);
+		document.querySelector("#debug").innerHTML = "Diamond open access journals for: " + formText + "<br><br>";
+		
+		tbl=buildTable(concept);
+                
+  		// appends <table> into <body>
+		//https://stackoverflow.com/a/7018615/2268280
+  		document.querySelector("#debug").appendChild(tbl);	
+	};
+        //Auxiliary functions
+	function buildTable(concept){	
+		const tbl = document.createElement("table");
+  		const tblHead = document.createElement("thead");		
+  		const tblBody = document.createElement("tbody");		
+		//row
+		const row1 = document.createElement("tr");
+	      	row1.appendChild( insertCell("<b>Journal</b>") );
+	      	row1.appendChild( insertCell("<b>Publisher</b>") );
+		row1.appendChild( insertCell("<b>Country</b>") );
+		row1.appendChild( insertCell("<b>Articles</b>") );
+		row1.appendChild( insertCell("<b>Citations</b>") );
+		row1.appendChild( insertCell("<b>h-index</b>") );
+    		tblHead.appendChild(row1);
+		//end row
+		tbl.appendChild(tblHead);
+
+		// Use an API-REST call to get the `data` for the url parameter `concept` 
+		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:0&per_page=200";
+		console.log(apirest);
+		fetch(apirest)
+		.then(response => response.json())
+		.then((data) => {
+		      // we call that data here
+		      console.log(data); // check the data on the console
+		      //output.innerHTML = ""; // Initial content is empty
+		      data.results.forEach((el) => {
+		        // loop through the json data using forEach method
+		        // console.log(el);
+		        jsonList(el,tblBody); // calling jsonList function
+		      });
+		    });
+		// put the <tbody> in the <table>
+  		tbl.appendChild(tblBody);
+		// sets the border attribute of tbl to '2'
+  		tbl.setAttribute("border", "1");
+		//tbl.setAttribute("style", "width:100%");
+		return tbl;
+	       };
+		function insertCell(ctext) {
+			//with HtmlNode instead of TextNode
+			const cell = document.createElement("td");
+			//const celltext = document.createTextNode(ctext);
+			var htmlNode = document.createElement('span');
+    			htmlNode.innerHTML = ctext;
+    			//htmlNode.className = 'treehtml';
+    			//htmlNode.setAttribute("style","font-weight: bold;");
+			cell.appendChild(htmlNode);
+			return cell;
+		};				
+	// Create a function to display the json data dynamically on the webpage
+	function jsonList(item,tblBody) {
+			//https://bobbyhadz.com/blog/javascript-get-country-name-from-country-code
+		        const regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+		
+			//row
+			const row = document.createElement("tr");
+			
+	      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
+	      		row.appendChild( insertCell(`${item.host_organization_name}`) );
+			if (item.country_code){
+					row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
+				     } else {
+					row.appendChild( insertCell(""));
+				}
+			row.appendChild( insertCell(`${item.works_count}`) );
+			row.appendChild( insertCell(`${item.cited_by_count}`) );
+			row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
+			tblBody.appendChild(row);
+			//end row
+			return tblBody;
+		};
+	</script>
+	<hr>
+	<h3>Advanced</h3>
+	<p>
+	  Visit the following link <a href="https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049"><code>https://restrepo.github.io/diamondoa/advanced.html?concept=C107038049</code></a>: 
+	  Change the <a href="https://docs.openalex.org">OpenAlex</a> <a href="https://docs.openalex.org/api-entities/concepts/concept-object#id">concept identifier</a> at the end of the URL by one of the 65 thousand from the 
+	  <a href="https://docs.google.com/spreadsheets/d/1LBFHjPt4rj_9r0t0TTAlT68NwOtNH8Z21lBMsJDMoZg/edit#gid=1473310811">official spreadsheet here<a>
+	  or edit the URL at the end: from the <a href="https://api.openalex.org/concepts?filter=display_name.search:concept_here">OpenAlex API</a>
+	  (or <a href="https://api.openalex.org/concepts?filter=level:0">by level</a>)
+	</p>
+	<p>Code: <a href="https://github.com/restrepo/diamondoa"><i style="font-size:24px" class="fa">&#xf09b;</i></a></p> 
+</body>
+</html>
