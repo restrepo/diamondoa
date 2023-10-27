@@ -454,6 +454,7 @@
 			row.appendChild( insertCell(`${item.apc_usd}`) );
 			//DOAJ API INFO
 			let i = 0;
+			var filled = false;
 			while (i < item.issn.length) {
     			console.log(item.issn[i]);
 				//if api DOAJ is working break and store this issn
@@ -466,10 +467,10 @@
 		      		console.log("doaj: " + doaj.results[0].bibjson.publication_time_weeks); // check the data on the console
 		      		//output.innerHTML = ""; // Initial content is empty
 			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
-				} else {
-					row.appendChild( insertCell(""));
+					filled = true;
 				};
-		        });				
+		        });	
+					
 				break;
     		    i++;
             };
