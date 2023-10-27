@@ -320,9 +320,6 @@
 	  <input type="submit" value="Submit"> 
 	</form>
 
-	<h3>Results</h3>
-	<p>Only first 200 journals are shown</p>
-	<hr>
 	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
 	<div id="debug"></div>
 	<div id="display_name"></div>
@@ -364,14 +361,18 @@
 	if ( max_apc != "0") {
 		golden = "and golden open access journals with maximum APC of " + max_apc + " USD";
 	}
+
+	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<h3>Results</h3><p>Only first 200 journals are shown</p><hr>";
 	
-	tbl=buildTable(concept,max_apc);
-    document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "Diamond " + golden + " for: ";
+	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "Diamond " + golden + " for: ";
   	// appends <table> into <body>
 	//https://stackoverflow.com/a/7018615/2268280
   	document.querySelector("#debug").appendChild(document.querySelector("#display_name"));	
 
 	//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<br/><br/>";
+
+	tbl=buildTable(concept,max_apc);
+
 
   	document.querySelector("#debug").appendChild(tbl);	
 	//};
@@ -388,6 +389,7 @@
 		row1.appendChild( insertCell("<b>Articles</b>") );
 		row1.appendChild( insertCell("<b>Citations</b>") );
 		row1.appendChild( insertCell("<b>h-index</b>") );
+		row1.appendChild( insertCell("<b>APC (USD)</b>") );
     		tblHead.appendChild(row1);
 		//end row
 		tbl.appendChild(tblHead);
@@ -447,6 +449,15 @@
 			row.appendChild( insertCell(`${item.works_count}`) );
 			row.appendChild( insertCell(`${item.cited_by_count}`) );
 			row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
+			row.appendChild( insertCell(`${item.apc_usd}`) );
+			//DOAJ API INFO
+			let i = 0;
+			while (i < item.issn.length) {
+    			console.log(item.issn[i]);
+    		i++;
+            };
+
+
 			tblBody.appendChild(row);
 			//end row
 			return tblBody;
