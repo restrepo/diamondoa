@@ -405,6 +405,11 @@
 			apc_usd="<" + max_apc;
 		}
 
+		//https://stackoverflow.com/a/43881141/2268280
+		let headers = new Headers();
+		headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+		headers.append('Access-Control-Allow-Credentials', 'true');
+		
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
 		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:" + apc_usd + "&per_page=200";
 		console.log(apirest);
