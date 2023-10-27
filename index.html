@@ -384,17 +384,17 @@
   		const tblBody = document.createElement("tbody");		
 		//row
 		const row1 = document.createElement("tr");
-	      	row1.appendChild( insertCell("<b>Journal</b>") );
-	      	row1.appendChild( insertCell("<b>Publisher</b>") );
+	    row1.appendChild( insertCell("<b>Journal</b>") );
+		row1.appendChild( insertCell("<b>ISSN</b>") );		
+	    row1.appendChild( insertCell("<b>Publisher</b>") );
 		row1.appendChild( insertCell("<b>Country</b>") );
 		row1.appendChild( insertCell("<b>Articles</b>") );
 		row1.appendChild( insertCell("<b>Citations</b>") );
 		row1.appendChild( insertCell("<b>h-index</b>") );
 		row1.appendChild( insertCell("<b>APC (USD)</b>") );
-		row1.appendChild( insertCell("<b>ISSN</b>") );		
 		row1.appendChild( insertCell("<b>Publication time (weeks)</b>") );
 		row1.appendChild( insertCell("<b>Language</b>") );
-		row1.appendChild( insertCell("<b>Keywords</b>") );
+		row1.appendChild( insertCell("<b>License</b>") );
 
     		tblHead.appendChild(row1);
 		//end row
@@ -445,8 +445,9 @@
 			//row
 			const row = document.createElement("tr");
 			
-	      		row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
-	      		row.appendChild( insertCell(`${item.host_organization_name}`) );
+	      	row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
+			row.appendChild( insertCell(`${item.issn[0]}`) );
+	      	row.appendChild( insertCell(`${item.host_organization_name}`) );
 			if (item.country_code){
 					row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
 				     } else {
@@ -456,9 +457,9 @@
 			row.appendChild( insertCell(`${item.cited_by_count}`) );
 			row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
 			row.appendChild( insertCell(`${item.apc_usd}`) );
-			row.appendChild( insertCell(`${item.issn[0]}`) );
 			//DOAJ API INFO
 			let i = 0;
+			let j = 0;
 			console.log("row b: " + row.childElementCount);
 			while (i < item.issn.length) {
     			console.log(item.issn[i]);
@@ -473,10 +474,19 @@
 		      		//output.innerHTML = ""; // Initial content is empty
 			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
 					row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
-					//row.appendChild( insertCell(`${doaj.results[0].bibjson.keywords}`));
+					row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
+				} else {
+					console.log("doaj 0:" + doaj.total);
+					j++;
 				};
-		        });	
+		        });
+				sleep(200);
     		    i++;
+				console.log("cr:" + i + " " + j);
+				if (j < i) {
+					console.log("i++"+i);
+					break; // TODO: only first issn
+					}
             };
 
 			tblBody.appendChild(row);
