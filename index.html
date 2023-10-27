@@ -391,8 +391,10 @@
 		row1.appendChild( insertCell("<b>Citations</b>") );
 		row1.appendChild( insertCell("<b>h-index</b>") );
 		row1.appendChild( insertCell("<b>APC (USD)</b>") );
+		row1.appendChild( insertCell("<b>ISSN</b>") );		
 		row1.appendChild( insertCell("<b>Publication time (weeks)</b>") );
 		row1.appendChild( insertCell("<b>Language</b>") );
+		row1.appendChild( insertCell("<b>Keywords</b>") );
 
     		tblHead.appendChild(row1);
 		//end row
@@ -454,6 +456,7 @@
 			row.appendChild( insertCell(`${item.cited_by_count}`) );
 			row.appendChild( insertCell(`${item.summary_stats.h_index}`) );
 			row.appendChild( insertCell(`${item.apc_usd}`) );
+			row.appendChild( insertCell(`${item.issn[0]}`) );
 			//DOAJ API INFO
 			let i = 0;
 			console.log("row b: " + row.childElementCount);
@@ -469,8 +472,8 @@
 		      		console.log("doaj: " + doaj.results[0].bibjson.publication_time_weeks); // check the data on the console
 		      		//output.innerHTML = ""; // Initial content is empty
 			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
-					row.appendChild( insertCell(`${doaj.results[0].bibjson.language}`));
-
+					row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
+					//row.appendChild( insertCell(`${doaj.results[0].bibjson.keywords}`));
 				};
 		        });	
     		    i++;
