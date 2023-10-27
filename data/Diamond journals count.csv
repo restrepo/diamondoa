@@ -1,4 +1,4 @@
-openalex_id,level,parent_parent_parent_display_names,parent_parent_display_names,parent_display_names,display_name,journals_count
+openalex_id,level,parent_3,parent_2,parent_1,display_name,journals_count
 C94625758,2,,Political science,Law,Politics,723
 C2779134260,2,,Medicine,"Internal medicine, Pathology",Disease,229
 C2908647359,2,,Sociology,"Demography, Environmental health",Population,224
