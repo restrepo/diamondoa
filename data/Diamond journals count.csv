@@ -1,283 +1,283 @@
 openalex_id,level,parent_3,parent_2,parent_1,display_name,journals_count
 C94625758,2,,Political science,Law,Politics,723
-C2779134260,2,,Medicine,"Internal medicine, Pathology",Disease,229
-C2908647359,2,,Sociology,"Demography, Environmental health",Population,224
-C4445939,2,,"Geography, History","Archaeology, Theology",Islam,199
-C104317684,2,,"Biology, Chemistry","Biochemistry, Genetics",Gene,157
-C121608353,2,,Biology,"Genetics, Internal medicine",Cancer,104
-C160735492,2,,Economics,"Economic growth, Law",Health care,67
-C18918823,2,,"Geography, History","Archaeology, Law",Tourism,54
+C2779134260,2,,Medicine,Internal medicine,Disease,229
+C2908647359,2,,Sociology,Demography,Population,224
+C4445939,2,,Geography,Archaeology,Islam,199
+C104317684,2,,Biology,Biochemistry,Gene,157
+C121608353,2,,Biology,Genetics,Cancer,104
+C160735492,2,,Economics,Economic growth,Health care,67
+C18918823,2,,Geography,Archaeology,Tourism,54
 C2778137410,2,,Philosophy,Linguistics,Government (linguistics),54
-C190248442,2,,Sociology,"Anthropology, Social science",Qualitative research,52
-C11012388,2,,Political science,"Law, Social psychology",Creativity,47
+C190248442,2,,Sociology,Anthropology,Qualitative research,52
+C11012388,2,,Political science,Law,Creativity,47
 C204787440,2,,Medicine,Pathology,Alternative medicine,46
-C118518473,2,,"Geography, History","Archaeology, Ecology",Agriculture,43
-C523546767,2,,Biology,"Genetics, Paleontology",Bacteria,42
-C2777267654,2,,Biology,"Botany, Ecology, Paleontology",Test (biology),40
-C109007969,2,,Geology,"Geomorphology, Paleontology",Structural basin,36
+C118518473,2,,Geography,Archaeology,Agriculture,43
+C523546767,2,,Biology,Genetics,Bacteria,42
+C2777267654,2,,Biology,Botany,Test (biology),40
+C109007969,2,,Geology,Geomorphology,Structural basin,36
 C185933670,2,,Biology,Ecology,Habitat,36
-C163258240,2,,Physics,"Quantum mechanics, Thermodynamics",Power (physics),36
-C555293320,2,,"Biology, Medicine",Endocrinology,Diabetes mellitus,34
+C163258240,2,,Physics,Quantum mechanics,Power (physics),36
+C555293320,2,,Biology,Endocrinology,Diabetes mellitus,34
 C2909208804,2,,,,Fish <Actinopterygii>,33
-C161790260,2,,"Biology, Chemistry","Biochemistry, Organic chemistry",Catalysis,33
+C161790260,2,,Biology,Biochemistry,Catalysis,33
 C2779234561,2,,Biology,Genetics,Pregnancy,33
-C169900460,2,,"Biology, Psychology","Neuroscience, Psychiatry",Cognition,32
-C76886044,2,,"Engineering, Geology",Geotechnical engineering,Hydrology (agriculture),31
-C2777212361,2,,Computer science,"Artificial intelligence, Epistemology",Class (philosophy),30
-C2779343474,2,,"Geography, History","Archaeology, Paleontology",Context (archaeology),28
-C123657996,2,,"Geography, History","Archaeology, Visual arts",Architecture,27
-C200870193,2,,"Business, Economics",Finance,Stock exchange,26
-C165801399,2,,Engineering,"Electrical engineering, Quantum mechanics",Voltage,26
-C120912362,2,,Economics,"Economic growth, Law",Higher education,26
-C48103436,2,,"Computer science, Mathematics","Algorithm, Programming language",State (computer science),26
-C2778257484,2,,Medicine,"Ophthalmology, Optics, Surgery",Visual acuity,24
-C2775924081,2,,Computer science,"Artificial intelligence, Management",Control (management),24
-C2910001868,2,,"Business, Economics","Economic policy, International economics, International trade",European union,24
-C56666940,2,,Computer science,"Operating system, Programming language",Documentation,23
-C77928131,2,,"Biology, Geology","Paleontology, Seismology",Tectonics,23
+C169900460,2,,Biology,Neuroscience,Cognition,32
+C76886044,2,,Engineering,Geotechnical engineering,Hydrology (agriculture),31
+C2777212361,2,,Computer science,Artificial intelligence,Class (philosophy),30
+C2779343474,2,,Geography,Archaeology,Context (archaeology),28
+C123657996,2,,Geography,Archaeology,Architecture,27
+C200870193,2,,Business,Finance,Stock exchange,26
+C165801399,2,,Engineering,Electrical engineering,Voltage,26
+C120912362,2,,Economics,Economic growth,Higher education,26
+C48103436,2,,Computer science,Algorithm,State (computer science),26
+C2778257484,2,,Medicine,Ophthalmology,Visual acuity,24
+C2775924081,2,,Computer science,Artificial intelligence,Control (management),24
+C2910001868,2,,Business,Economic policy,European union,24
+C56666940,2,,Computer science,Operating system,Documentation,23
+C77928131,2,,Biology,Paleontology,Tectonics,23
 C158622935,2,,Physics,Quantum mechanics,Nonlinear system,23
-C191935318,2,,"Geography, History","Archaeology, Law",China,23
-C500558357,2,,Medicine,"Cardiology, Internal medicine, Psychiatry",Myocardial infarction,23
-C558565934,2,,Art,"Literature, Visual arts",Musical,21
+C191935318,2,,Geography,Archaeology,China,23
+C500558357,2,,Medicine,Cardiology,Myocardial infarction,23
+C558565934,2,,Art,Literature,Musical,21
 C2779207338,2,,Philosophy,Linguistics,Indonesian,21
-C159654299,2,,Biology,"Genetics, Immunology",Antibody,21
-C2776291640,2,,Computer science,"Machine learning, Statistics",Value (mathematics),21
-C157369684,2,,Biology,"Botany, Ecology, Zoology",Genus,20
-C2522874641,2,,Biology,"Genetics, Immunology, Virology",Virus,19
+C159654299,2,,Biology,Genetics,Antibody,21
+C2776291640,2,,Computer science,Machine learning,Value (mathematics),21
+C157369684,2,,Biology,Botany,Genus,20
+C2522874641,2,,Biology,Genetics,Virus,19
 C2777842544,2,,Philosophy,Linguistics,Czech,19
-C2778004101,2,,"Biology, Chemistry","Biochemistry, Organic chemistry",Antioxidant,19
+C2778004101,2,,Biology,Biochemistry,Antioxidant,19
 C21931767,2,,Philosophy,Linguistics,Ukrainian,19
-C98045186,2,,Computer science,"Operating system, Programming language",Process (computing),19
-C164913051,2,,Philosophy,"Linguistics, Literature",Poetry,18
+C98045186,2,,Computer science,Operating system,Process (computing),19
+C164913051,2,,Philosophy,Linguistics,Poetry,18
 C96455323,2,,Philosophy,Linguistics,Arabic,17
-C44725695,2,,Philosophy,"Epistemology, Law",Normative,17
-C2780091579,2,,"Biology, Medicine","Endocrinology, Genetics, Internal medicine",Kidney,17
-C2778198053,2,,Medicine,"Cardiology, Internal medicine",Heart failure,16
-C153180895,2,,Computer science,"Artificial intelligence, Cognitive psychology",Pattern recognition (psychology),16
-C8891405,2,,Biology,"Genetics, Immunology",Immune system,15
-C2776694085,2,,Biology,"Genetics, Internal medicine, Surgery",Chemotherapy,15
+C44725695,2,,Philosophy,Epistemology,Normative,17
+C2780091579,2,,Biology,Endocrinology,Kidney,17
+C2778198053,2,,Medicine,Cardiology,Heart failure,16
+C153180895,2,,Computer science,Artificial intelligence,Pattern recognition (psychology),16
+C8891405,2,,Biology,Genetics,Immune system,15
+C2776694085,2,,Biology,Genetics,Chemotherapy,15
 C83559648,2,,Philosophy,Linguistics,Croatian,15
-C558461103,2,,"Medicine, Psychology",Psychiatry,Anxiety,15
-C181199279,2,,"Biology, Chemistry","Biochemistry, Nuclear magnetic resonance, Organic chemistry",Enzyme,14
-C2777714996,2,,Medicine,"Internal medicine, Linguistics",Lung,14
-C138816342,2,,Medicine,"Nursing, Pathology",Public health,14
+C558461103,2,,Medicine,Psychiatry,Anxiety,15
+C181199279,2,,Biology,Biochemistry,Enzyme,14
+C2777714996,2,,Medicine,Internal medicine,Lung,14
+C138816342,2,,Medicine,Nursing,Public health,14
 C136119220,2,,Mathematics,Pure mathematics,Algebra over a field,14
-C173758957,2,,Biology,"Botany, Ecology",Larva,13
-C135628077,2,,Engineering,"Structural engineering, Thermodynamics",Finite element method,13
-C132525143,2,,Mathematics,"Combinatorics, Discrete mathematics, Theoretical computer science",Graph,13
-C2780827179,2,,"Biology, Chemistry","Biochemistry, Botany, Ophthalmology",Retinal,13
-C2777575956,2,,"Biology, Medicine","Immunology, Internal medicine",Rheumatoid arthritis,13
-C199033989,2,,Philosophy,"Linguistics, Literature",Narrative,12
-C151719136,2,,Political science,"Law, Literature",Publishing,12
-C2780378061,2,,Economics,"Economy, Marketing",Service (business),12
-C159750122,2,,Biology,"Ecology, Soil science",Soil water,12
-C199521495,2,,"Business, Economics","Accounting, Management",Audit,12
-C509974204,2,,Medicine,"Internal medicine, Radiology, Surgery",Radiation therapy,12
-C87976508,2,,Materials science,"Composite material, Crystallography, Metallurgy",Microstructure,12
-C520434653,2,,Physics,"Optics, Quantum mechanics",Laser,11
-C134362201,2,,"Medicine, Psychology","Psychiatry, Psychotherapist",Mental health,11
+C173758957,2,,Biology,Botany,Larva,13
+C135628077,2,,Engineering,Structural engineering,Finite element method,13
+C132525143,2,,Mathematics,Combinatorics,Graph,13
+C2780827179,2,,Biology,Biochemistry,Retinal,13
+C2777575956,2,,Biology,Immunology,Rheumatoid arthritis,13
+C199033989,2,,Philosophy,Linguistics,Narrative,12
+C151719136,2,,Political science,Law,Publishing,12
+C2780378061,2,,Economics,Economy,Service (business),12
+C159750122,2,,Biology,Ecology,Soil water,12
+C199521495,2,,Business,Accounting,Audit,12
+C509974204,2,,Medicine,Internal medicine,Radiation therapy,12
+C87976508,2,,Materials science,Composite material,Microstructure,12
+C520434653,2,,Physics,Optics,Laser,11
+C134362201,2,,Medicine,Psychiatry,Mental health,11
 C169437150,2,,Political science,Law,Human rights,11
-C17525397,2,,Chemistry,"Physical chemistry, Quantum mechanics",Electrode,11
-C2778818304,2,,"Biology, Psychology","Neuroscience, Physical therapy",Rehabilitation,11
+C17525397,2,,Chemistry,Physical chemistry,Electrode,11
+C2778818304,2,,Biology,Neuroscience,Rehabilitation,11
 C2777351106,2,,Political science,Law,Legislation,11
-C170493617,2,,"Biology, Chemistry","Biochemistry, Genetics, Internal medicine",Receptor,11
-C519580073,2,,"Art, History","Art history, Literature, Visual arts",Movie theater,10
+C170493617,2,,Biology,Biochemistry,Receptor,11
+C519580073,2,,Art,Art history,Movie theater,10
 C502338164,2,,Philosophy,Linguistics,Lithuanian,10
-C3019281177,2,,History,"Ancient history, Anthropology, Ethnology",South asia,10
-C2779306644,2,,Biology,"Biotechnology, Endocrinology, Internal medicine",Insulin,10
-C2778653478,2,,"Biology, Medicine","Endocrinology, Internal medicine",Kidney disease,10
-C511355011,2,,"Biology, Medicine","Endocrinology, Internal medicine, Pathology",Obesity,10
+C3019281177,2,,History,Ancient history,South asia,10
+C2779306644,2,,Biology,Biotechnology,Insulin,10
+C2778653478,2,,Biology,Endocrinology,Kidney disease,10
+C511355011,2,,Biology,Endocrinology,Obesity,10
 C39896193,2,,Mathematics,Statistics,Descriptive statistics,10
-C2779357621,2,,"Environmental science, Geography","Environmental planning, Ethnology, Socioeconomics",Tanzania,10
-C202751555,2,,"Biology, Chemistry","Biochemistry, Genetics",In vitro,9
-C2780026712,2,,Materials science,"Composite material, Metallurgy, Organic chemistry",Alloy,9
+C2779357621,2,,Environmental science,Environmental planning,Tanzania,10
+C202751555,2,,Biology,Biochemistry,In vitro,9
+C2780026712,2,,Materials science,Composite material,Alloy,9
 C143409427,2,,Medicine,Radiology,Magnetic resonance imaging,9
-C197321923,2,,Biology,"Agronomy, Botany, Horticulture",Cultivar,9
-C2778738651,2,,Psychology,"Social psychology, Theology",Novelty,9
-C27415008,2,,Medicine,"Nursing, Psychiatry",Psychological intervention,9
-C110875604,2,,Computer science,"Operating system, World Wide Web",The Internet,9
-C2779473830,2,,"Biology, Chemistry","Biochemistry, Law",MEDLINE,9
+C197321923,2,,Biology,Agronomy,Cultivar,9
+C2778738651,2,,Psychology,Social psychology,Novelty,9
+C27415008,2,,Medicine,Nursing,Psychological intervention,9
+C110875604,2,,Computer science,Operating system,The Internet,9
+C2779473830,2,,Biology,Biochemistry,MEDLINE,9
 C2781121862,2,,Philosophy,Linguistics,Turkish,9
-C113196181,2,,Chemistry,"Chromatography, Environmental chemistry, Organic chemistry",Analytical Chemistry (journal),9
-C77411442,2,,"Biology, Medicine","Anatomy, Endocrinology, Internal medicine",Urinary system,9
-C71315377,2,,"Biology, Chemistry","Biochemistry, Endocrinology, Internal medicine",Hormone,9
-C2911091166,2,,Medicine,"Internal medicine, Surgery",Transplantation,9
-C47177190,2,,Economics,"Economic growth, Law, Pedagogy",Curriculum,8
-C71640776,2,,Biology,"Botany, Ecology, Paleontology",Taxon,8
-C501593827,2,,"Biology, Chemistry","Biochemistry, Genetics, Microbiology",Antibiotics,8
+C113196181,2,,Chemistry,Chromatography,Analytical Chemistry (journal),9
+C77411442,2,,Biology,Anatomy,Urinary system,9
+C71315377,2,,Biology,Biochemistry,Hormone,9
+C2911091166,2,,Medicine,Internal medicine,Transplantation,9
+C47177190,2,,Economics,Economic growth,Curriculum,8
+C71640776,2,,Biology,Botany,Taxon,8
+C501593827,2,,Biology,Biochemistry,Antibiotics,8
 C110872660,2,,Biology,Ecology,Ecosystem,8
-C58642233,2,,Biology,"Botany, Ecology, Zoology",Taxonomy (biology),8
-C522805319,2,,"Biology, Psychology","Neuroscience, Psychiatry",Electroencephalography,8
-C2779530757,2,,Philosophy,"Epistemology, Quantum mechanics",Quality (philosophy),8
-C547764534,2,,Economics,"Economic growth, Law, Pedagogy",Literacy,8
-C115961682,2,,Computer science,"Artificial intelligence, Computer vision",Image (mathematics),8
-C147483822,2,,Biology,"Genetics, Immunology",Antigen,8
-C84309077,2,,"Business, Economics","Finance, Law",Entrepreneurship,8
-C2777904410,2,,Computer science,"Operating system, Programming language",Software,7
-C2778755073,2,,Geography,"Cartography, Quantum mechanics",Scale (ratio),7
-C88610354,2,,Political science,"Law, Mathematics education, Pedagogy",Teaching method,7
-C518677369,2,,Political science,"Law, World Wide Web",Social media,7
+C58642233,2,,Biology,Botany,Taxonomy (biology),8
+C522805319,2,,Biology,Neuroscience,Electroencephalography,8
+C2779530757,2,,Philosophy,Epistemology,Quality (philosophy),8
+C547764534,2,,Economics,Economic growth,Literacy,8
+C115961682,2,,Computer science,Artificial intelligence,Image (mathematics),8
+C147483822,2,,Biology,Genetics,Antigen,8
+C84309077,2,,Business,Finance,Entrepreneurship,8
+C2777904410,2,,Computer science,Operating system,Software,7
+C2778755073,2,,Geography,Cartography,Scale (ratio),7
+C88610354,2,,Political science,Law,Teaching method,7
+C518677369,2,,Political science,Law,Social media,7
 C129400051,2,,Philosophy,Linguistics,Romanian,7
-C2777077863,2,,"Biology, Medicine","Immunology, Internal medicine",Arthritis,7
+C2777077863,2,,Biology,Immunology,Arthritis,7
 C2778408831,2,,Philosophy,Linguistics,Serbian,7
-C202271784,2,,Medicine,"Dentistry, Orthodontics, Paleontology",Molar,7
-C179454799,2,,Sociology,"Anthropology, Archaeology",Ethnography,7
+C202271784,2,,Medicine,Dentistry,Molar,7
+C179454799,2,,Sociology,Anthropology,Ethnography,7
 C2781054738,2,,Medicine,Physical therapy,Athletes,7
-C196843134,2,,Biology,"Cell biology, Fishery, Genetics",Embryo,7
+C196843134,2,,Biology,Cell biology,Embryo,7
 C2780623531,2,,Philosophy,Linguistics,Irish,7
-C168563851,2,,Medicine,"Internal medicine, Pathology, Surgery",Randomized controlled trial,7
-C2778063415,2,,Medicine,"Internal medicine, Psychiatry, Surgery",Hemodialysis,7
-C44575665,2,,"Biology, Medicine","Anatomy, Radiology, Surgery",Lumbar,7
-C132651083,2,,Biology,"Ecology, Oceanography",Climate change,7
-C2780645631,2,,Engineering,"Aerospace engineering, Mechanical engineering, Thermodynamics",Stroke (engine),7
-C2780876879,2,,Philosophy,"Epistemology, Psychotherapist",Meaning (existential),7
-C16443162,2,,Political science,"Law, Mathematics education, Pedagogy",Educational technology,7
-C84393581,2,,"Biology, Medicine","Endocrinology, Internal medicine, Radiology",Blood pressure,7
-C526584372,2,,"Biology, Medicine","Endocrinology, Genetics, Internal medicine",Thyroid,7
-C555944384,2,,Computer science,"Operating system, Telecommunications",Wireless,7
-C2780724011,2,,Medicine,"Nursing, Psychiatry",Emergency department,7
-C145148216,2,,Chemistry,"Organic chemistry, Quantum mechanics",Ion,7
-C202565627,2,,"Psychology, Sociology","Criminology, Law",Criminal law,7
-C161487207,2,,"Art, Philosophy","Humanities, Meteorology, Oceanography",Derecho,7
-C60671577,2,,"Geography, History","Archaeology, Law",Cultural heritage,6
-C100544194,2,,"Biology, Chemistry","Biochemistry, Food science, Organic chemistry",Fermentation,6
+C168563851,2,,Medicine,Internal medicine,Randomized controlled trial,7
+C2778063415,2,,Medicine,Internal medicine,Hemodialysis,7
+C44575665,2,,Biology,Anatomy,Lumbar,7
+C132651083,2,,Biology,Ecology,Climate change,7
+C2780645631,2,,Engineering,Aerospace engineering,Stroke (engine),7
+C2780876879,2,,Philosophy,Epistemology,Meaning (existential),7
+C16443162,2,,Political science,Law,Educational technology,7
+C84393581,2,,Biology,Endocrinology,Blood pressure,7
+C526584372,2,,Biology,Endocrinology,Thyroid,7
+C555944384,2,,Computer science,Operating system,Wireless,7
+C2780724011,2,,Medicine,Nursing,Emergency department,7
+C145148216,2,,Chemistry,Organic chemistry,Ion,7
+C202565627,2,,Psychology,Criminology,Criminal law,7
+C161487207,2,,Art,Humanities,Derecho,7
+C60671577,2,,Geography,Archaeology,Cultural heritage,6
+C100544194,2,,Biology,Biochemistry,Fermentation,6
 C2781411149,2,,Medicine,Surgery,Implant,6
-C104863432,2,,Medicine,"Family medicine, Law, Nursing",Pharmacy,6
-C2778061430,2,,Economics,"Economic growth, Law",Scholarship,6
-C154775046,2,,"Geography, History","Archaeology, Linguistics",German,6
-C22508944,2,,Biology,"Botany, Horticulture, Marketing",PEST analysis,6
-C94061648,2,,"Engineering, Environmental science","Environmental engineering, Waste management",Wastewater,6
-C143753070,2,,Physics,"Acoustics, Radiology",Ultrasound,6
-C2778348673,2,,Economics,"Macroeconomics, Microeconomics",Production (economics),6
-C668760,2,,Economics,"Economic growth, Law, Pedagogy",Vocational education,6
-C78045399,2,,Mathematics,"Mathematical analysis, Quantum mechanics",Differential equation,6
-C2778336525,2,,Medicine,"Radiology, Surgery",Arthroplasty,6
-C2780035454,2,,"Biology, Medicine","Pharmacology, Psychiatry",Drug,6
-C139621336,2,,Political science,"Law, Microeconomics, Neoclassical economics",Economic Justice,6
-C26760741,2,,Philosophy,"Epistemology, Neuroscience",Perception,6
-C55952523,2,,"Biology, Chemistry","Food science, Optics, Visual arts",Wine,6
-C28328180,2,,Biology,"Cell biology, Genetics",Stem cell,6
-C114010052,2,,Philosophy,"Linguistics, Mathematics education, Pedagogy",Foreign language,6
-C182306322,2,,"Business, Economics",Finance,Order (exchange),6
-C2776882836,2,,"Biology, Psychology","Neuroscience, Ophthalmology, Optics",Cornea,6
-C18762648,2,,Engineering,"Mechanical engineering, Quantum mechanics, Thermodynamics",Work (physics),6
-C205783811,2,,"Art, History","Art history, Visual arts",Painting,6
-C150152722,2,,"Geography, History","Archaeology, Theology",Judaism,6
-C527412718,2,,Philosophy,"Linguistics, Programming language",Interpretation (philosophy),6
-C70789860,2,,Political science,"Law, Visual arts",The arts,6
-C521977710,2,,Materials science,"Composite material, Nuclear magnetic resonance, Organic chemistry",Polymer,5
+C104863432,2,,Medicine,Family medicine,Pharmacy,6
+C2778061430,2,,Economics,Economic growth,Scholarship,6
+C154775046,2,,Geography,Archaeology,German,6
+C22508944,2,,Biology,Botany,PEST analysis,6
+C94061648,2,,Engineering,Environmental engineering,Wastewater,6
+C143753070,2,,Physics,Acoustics,Ultrasound,6
+C2778348673,2,,Economics,Macroeconomics,Production (economics),6
+C668760,2,,Economics,Economic growth,Vocational education,6
+C78045399,2,,Mathematics,Mathematical analysis,Differential equation,6
+C2778336525,2,,Medicine,Radiology,Arthroplasty,6
+C2780035454,2,,Biology,Pharmacology,Drug,6
+C139621336,2,,Political science,Law,Economic Justice,6
+C26760741,2,,Philosophy,Epistemology,Perception,6
+C55952523,2,,Biology,Food science,Wine,6
+C28328180,2,,Biology,Cell biology,Stem cell,6
+C114010052,2,,Philosophy,Linguistics,Foreign language,6
+C182306322,2,,Business,Finance,Order (exchange),6
+C2776882836,2,,Biology,Neuroscience,Cornea,6
+C18762648,2,,Engineering,Mechanical engineering,Work (physics),6
+C205783811,2,,Art,Art history,Painting,6
+C150152722,2,,Geography,Archaeology,Judaism,6
+C527412718,2,,Philosophy,Linguistics,Interpretation (philosophy),6
+C70789860,2,,Political science,Law,The arts,6
+C521977710,2,,Materials science,Composite material,Polymer,5
 C130217890,2,,Biology,Ecology,Biodiversity,5
 C84114770,2,,Physics,Quantum mechanics,Quantum,5
-C140505726,2,,"Geography, History","Archaeology, Genetics, Veterinary medicine",Forensic science,5
-C147446459,2,,Art,"Literature, Visual arts",Dance,5
-C187288502,2,,Psychology,"Psychoanalysis, Social psychology",Personality,5
+C140505726,2,,Geography,Archaeology,Forensic science,5
+C147446459,2,,Art,Literature,Dance,5
+C187288502,2,,Psychology,Psychoanalysis,Personality,5
 C66204764,2,,Biology,Ecology,Sustainability,5
-C125471540,2,,Biology,"Botany, Ecology",Fauna,5
-C158886217,2,,Political science,"Law, Linguistics",Latin Americans,5
+C125471540,2,,Biology,Botany,Fauna,5
+C158886217,2,,Political science,Law,Latin Americans,5
 C55447825,2,,Political science,Law,International law,5
-C150846664,2,,Physics,"Astronomy, Astrophysics, Computer vision",Stars,5
-C91602232,2,,"Economics, Mathematics","Econometrics, Finance, Financial economics",Volatility (finance),5
-C39389867,2,,"Business, Economics","Finance, Management",Corporate governance,5
+C150846664,2,,Physics,Astronomy,Stars,5
+C91602232,2,,Economics,Econometrics,Volatility (finance),5
+C39389867,2,,Business,Finance,Corporate governance,5
 C74448152,2,,Engineering,Aerospace engineering,Aviation,5
-C36454342,2,,Physics,"Nuclear physics, Radiology, Surgery",Radiography,5
-C182310444,2,,Mathematics,"Mathematical analysis, Quantum mechanics",Boundary value problem,5
-C196558001,2,,Physics,"Mechanics, Meteorology, Thermodynamics",Turbulence,5
-C134121241,2,,Materials science,"Composite material, Metallurgy, Thermodynamics",Yield (engineering),5
-C159641895,2,,"Biology, Chemistry","Biochemistry, Endocrinology, Internal medicine",Renal function,5
-C137403100,2,,Sociology,"Anthropology, Law",Ethnic group,5
-C3017944768,2,,Medicine,"Emergency medicine, Environmental health, Medical emergency",Poison control,5
-C142796444,2,,Biology,"Ecology, Organic chemistry",Nutrient,5
-C529618451,2,,Medicine,"Radiology, Surgery",Ultrasonography,5
-C107054158,2,,"Geography, Physics",Meteorology,Precipitation,5
-C116675565,2,,Medicine,"Pathology, Virology",Outbreak,5
+C36454342,2,,Physics,Nuclear physics,Radiography,5
+C182310444,2,,Mathematics,Mathematical analysis,Boundary value problem,5
+C196558001,2,,Physics,Mechanics,Turbulence,5
+C134121241,2,,Materials science,Composite material,Yield (engineering),5
+C159641895,2,,Biology,Biochemistry,Renal function,5
+C137403100,2,,Sociology,Anthropology,Ethnic group,5
+C3017944768,2,,Medicine,Emergency medicine,Poison control,5
+C142796444,2,,Biology,Ecology,Nutrient,5
+C529618451,2,,Medicine,Radiology,Ultrasonography,5
+C107054158,2,,Geography,Meteorology,Precipitation,5
+C116675565,2,,Medicine,Pathology,Outbreak,5
 C2776092919,2,,Philosophy,Linguistics,Estonian,5
-C2778186239,2,,"Biology, Psychology","Neuroscience, Psychiatry",Epilepsy,5
-C2779978075,2,,Medicine,"Internal medicine, Psychiatry, Surgery",Dialysis,5
-C4646841,2,,"Geography, History","Archaeology, Ecology",Mediterranean climate,5
-C82706917,2,,Physics,"Nuclear physics, Quantum mechanics",Plasma,5
-C50517652,2,,Physics,"Mechanics, Quantum mechanics, Thermodynamics",Heat transfer,5
+C2778186239,2,,Biology,Neuroscience,Epilepsy,5
+C2779978075,2,,Medicine,Internal medicine,Dialysis,5
+C4646841,2,,Geography,Archaeology,Mediterranean climate,5
+C82706917,2,,Physics,Nuclear physics,Plasma,5
+C50517652,2,,Physics,Mechanics,Heat transfer,5
 C2781069245,2,,Medicine,Pathology,Tuberculosis,5
-C155672457,2,,Engineering,"Chemical engineering, Nanotechnology, Quantum mechanics",Nanoparticle,5
-C127162648,2,,Computer science,"Computer network, Electrical engineering, Telecommunications",Channel (broadcasting),5
-C2780775167,2,,"Biology, Psychology","Neuroscience, Psychiatry",Spinal cord,5
+C155672457,2,,Engineering,Chemical engineering,Nanoparticle,5
+C127162648,2,,Computer science,Computer network,Channel (broadcasting),5
+C2780775167,2,,Biology,Neuroscience,Spinal cord,5
 C2776950860,3,,,,Originality,44
-C524204448,3,Medicine,"Internal medicine, Pathology",Disease,Infectious disease (medical specialty),27
-C100363876,3,Sociology,"Demography, Environmental health",Population,Nonprobability sampling,23
-C168702047,3,"Geography, History","Archaeology, Theology",Islam,Sharia,22
-C47446073,3,Computer science,"Artificial intelligence, Management",Control (management),Control theory (sociology),18
+C524204448,3,Medicine,Internal medicine,Disease,Infectious disease (medical specialty),27
+C100363876,3,Sociology,Demography,Population,Nonprobability sampling,23
+C168702047,3,Geography,Archaeology,Islam,Sharia,22
+C47446073,3,Computer science,Artificial intelligence,Control (management),Control theory (sociology),18
 C555826173,3,Political science,Law,Politics,Democracy,13
-C2776235491,3,Biology,"Genetics, Internal medicine",Cancer,Prostate,12
-C530470458,3,Biology,"Genetics, Internal medicine",Cancer,Breast cancer,11
+C2776235491,3,Biology,Genetics,Cancer,Prostate,12
+C530470458,3,Biology,Genetics,Cancer,Breast cancer,11
 C3017649214,3,,,,Sri lanka,10
-C52859227,3,Chemistry,"Physical chemistry, Quantum mechanics",Electrode,Electrochemistry,9
-C2777180221,3,"Biology, Medicine",Endocrinology,Diabetes mellitus,Type 2 diabetes,8
-C150194340,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Gene expression,8
+C52859227,3,Chemistry,Physical chemistry,Electrode,Electrochemistry,9
+C2777180221,3,Biology,Endocrinology,Diabetes mellitus,Type 2 diabetes,8
+C150194340,3,Biology,Biochemistry,Gene,Gene expression,8
 C2777688143,3,Biology,Genetics,Pregnancy,Infertility,7
-C2780192828,3,Biology,"Genetics, Internal medicine",Cancer,Prostate cancer,6
+C2780192828,3,Biology,Genetics,Cancer,Prostate cancer,6
 C172680121,3,Biology,Genetics,Pregnancy,Fetus,6
-C68801617,3,Chemistry,"Physical chemistry, Quantum mechanics",Electrode,Electrolyte,5
-C518429986,3,Sociology,"Demography, Environmental health",Population,Fertility,5
-C2910068830,3,"Biology, Medicine",Endocrinology,Diabetes mellitus,Type 2 Diabetes Mellitus,5
-C141231307,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Genome,5
-C86339819,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Transcription factor,5
-C135763542,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Genotype,5
-C190385971,3,Medicine,"Emergency medicine, Environmental health, Medical emergency",Poison control,Injury prevention,4
-C165347436,3,Political science,"Law, Literature",Publishing,Project commissioning,4
-C89227174,3,Physics,"Quantum mechanics, Thermodynamics",Power (physics),Electric power system,4
+C68801617,3,Chemistry,Physical chemistry,Electrode,Electrolyte,5
+C518429986,3,Sociology,Demography,Population,Fertility,5
+C2910068830,3,Biology,Endocrinology,Diabetes mellitus,Type 2 Diabetes Mellitus,5
+C141231307,3,Biology,Biochemistry,Gene,Genome,5
+C86339819,3,Biology,Biochemistry,Gene,Transcription factor,5
+C135763542,3,Biology,Biochemistry,Gene,Genotype,5
+C190385971,3,Medicine,Emergency medicine,Poison control,Injury prevention,4
+C165347436,3,Political science,Law,Publishing,Project commissioning,4
+C89227174,3,Physics,Quantum mechanics,Power (physics),Electric power system,4
 C188947578,3,Medicine,Pathology,Alternative medicine,Traditional Chinese medicine,4
-C526869908,3,Medicine,"Emergency medicine, Environmental health, Medical emergency",Poison control,Suicide prevention,4
-C108615695,3,"Geography, History","Archaeology, Organic chemistry, Waste management",Coal,Coal mining,3
-C80899671,3,Mathematics,"Combinatorics, Discrete mathematics, Theoretical computer science",Graph,Vertex (graph theory),3
-C2779457091,3,Medicine,"Family medicine, Law, Nursing",Pharmacy,Pharmacist,3
-C182748727,3,Physics,"Mechanics, Meteorology, Thermodynamics",Turbulence,Reynolds number,3
-C526805850,3,Biology,"Genetics, Internal medicine",Cancer,Colorectal cancer,3
-C166735990,3,Medicine,"Emergency medicine, Environmental health, Medical emergency",Poison control,Human factors and ergonomics,3
+C526869908,3,Medicine,Emergency medicine,Poison control,Suicide prevention,4
+C108615695,3,Geography,Archaeology,Coal,Coal mining,3
+C80899671,3,Mathematics,Combinatorics,Graph,Vertex (graph theory),3
+C2779457091,3,Medicine,Family medicine,Pharmacy,Pharmacist,3
+C182748727,3,Physics,Mechanics,Turbulence,Reynolds number,3
+C526805850,3,Biology,Genetics,Cancer,Colorectal cancer,3
+C166735990,3,Medicine,Emergency medicine,Poison control,Human factors and ergonomics,3
 C2983189541,3,,,,Sleep quality,3
-C193252679,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Phylogenetic tree,3
-C143065580,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Mutant,3
-C75545042,3,"Geography, History","Archaeology, Law",Tourism,Tourism geography,3
+C193252679,3,Biology,Biochemistry,Gene,Phylogenetic tree,3
+C143065580,3,Biology,Biochemistry,Gene,Mutant,3
+C75545042,3,Geography,Archaeology,Tourism,Tourism geography,3
 C46973012,3,Biology,Genetics,Pregnancy,Gestation,3
-C113145756,3,Engineering,"Electrical engineering, Telecommunications",Antenna (radio),Dipole antenna,2
+C113145756,3,Engineering,Electrical engineering,Antenna (radio),Dipole antenna,2
 C542948173,3,Political science,Law,Politics,Communism,2
-C2778260677,3,Medicine,"Internal medicine, Pathology",Disease,Inflammatory bowel disease,2
-C2777775583,3,Biology,"Botany, Ecology",Larva,Aedes aegypti,2
-C2780303639,3,"Biology, Medicine","Endocrinology, Genetics, Internal medicine","Kidney, Transplantation",Kidney transplantation,2
-C2780427987,3,Biology,"Genetics, Internal medicine",Cancer,Ovarian cancer,2
-C14279187,3,Computer science,"Operating system, Telecommunications","Global Positioning System, Satellite",GNSS applications,2
-C203776342,3,Mathematics,"Combinatorics, Discrete mathematics, Theoretical computer science",Graph,Line graph,2
-C105580179,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Messenger RNA,2
-C168197293,3,Biology,"Botany, Ecology",Pollen,Pollination,2
-C2780479503,3,Medicine,"Internal medicine, Pathology",Disease,Ulcerative colitis,2
-C2779609443,3,Medicine,"Internal medicine, Surgery",Transplantation,Liver transplantation,2
-C2777234453,3,Biology,"Genetics, Paleontology",Bacteria,Flora (microbiology),2
+C2778260677,3,Medicine,Internal medicine,Disease,Inflammatory bowel disease,2
+C2777775583,3,Biology,Botany,Larva,Aedes aegypti,2
+C2780303639,3,Biology,Endocrinology,Kidney,Kidney transplantation,2
+C2780427987,3,Biology,Genetics,Cancer,Ovarian cancer,2
+C14279187,3,Computer science,Operating system,Global Positioning System,GNSS applications,2
+C203776342,3,Mathematics,Combinatorics,Graph,Line graph,2
+C105580179,3,Biology,Biochemistry,Gene,Messenger RNA,2
+C168197293,3,Biology,Botany,Pollen,Pollination,2
+C2780479503,3,Medicine,Internal medicine,Disease,Ulcerative colitis,2
+C2779609443,3,Medicine,Internal medicine,Transplantation,Liver transplantation,2
+C2777234453,3,Biology,Genetics,Bacteria,Flora (microbiology),2
 C34355311,3,Political science,Law,Politics,International relations,2
 C199635899,3,Physics,Quantum mechanics,Magnetic field,Earth's magnetic field,2
-C2779734285,3,Medicine,"Internal medicine, Pathology",Disease,Parkinson's disease,2
-C2776306927,3,"Geography, History","Archaeology, Linguistics",German,Germanic languages,2
-C2779483572,3,Medicine,"Internal medicine, Pathology",Disease,Dementia,2
-C529173508,3,Computer science,"Operating system, Programming language",Software,Software development,2
+C2779734285,3,Medicine,Internal medicine,Disease,Parkinson's disease,2
+C2776306927,3,Geography,Archaeology,German,Germanic languages,2
+C2779483572,3,Medicine,Internal medicine,Disease,Dementia,2
+C529173508,3,Computer science,Operating system,Software,Software development,2
 C2777975735,3,Medicine,Pathology,Tuberculosis,Mycobacterium tuberculosis,2
-C170349913,3,Engineering,"Electrical engineering, Telecommunications",Antenna (radio),Microstrip antenna,2
-C149946192,3,Computer science,"Operating system, Telecommunications",Wireless,Cognitive radio,2
-C53537400,3,Economics,"Economic growth, Law, Pedagogy",Literacy,Numeracy,2
+C170349913,3,Engineering,Electrical engineering,Antenna (radio),Microstrip antenna,2
+C149946192,3,Computer science,Operating system,Wireless,Cognitive radio,2
+C53537400,3,Economics,Economic growth,Literacy,Numeracy,2
 C2776164576,3,Medicine,Pathology,Alternative medicine,Osteoarthritis,2
-C151764478,3,Engineering,"Electrical engineering, Telecommunications",Antenna (radio),Radiation pattern,2
+C151764478,3,Engineering,Electrical engineering,Antenna (radio),Radiation pattern,2
 C2778205975,3,,,,Polysomnography,2
-C2780801004,3,Biology,"Genetics, Immunology","Antibody, Antigen, Immune system",Immunization,2
-C147077947,3,Sociology,"Demography, Environmental health",Population,Socioeconomic status,2
-C108411613,3,Physics,Quantum mechanics,"Magnetic field, Plasma",Solar wind,2
+C2780801004,3,Biology,Genetics,Antibody,Immunization,2
+C147077947,3,Sociology,Demography,Population,Socioeconomic status,2
+C108411613,3,Physics,Quantum mechanics,Magnetic field,Solar wind,2
 C136525101,3,Medicine,Pathology,Alternative medicine,Fabrication,2
 C56837625,3,Medicine,Pathology,Alternative medicine,Acupuncture,2
-C90132467,3,"Biology, Chemistry","Biochemistry, Genetics",Gene,Phylogenetics,2
-C512716672,3,Biology,"Cell biology, Fishery, Genetics","Embryo, Pregnancy",In vitro fertilisation,2
-C2778706068,3,Biology,"Botany, Ecology",Larva,Chironomidae,2
-C9417928,3,Computer science,"Artificial intelligence, Computer vision",Image (mathematics),Image processing,2
+C90132467,3,Biology,Biochemistry,Gene,Phylogenetics,2
+C512716672,3,Biology,Cell biology,Embryo,In vitro fertilisation,2
+C2778706068,3,Biology,Botany,Larva,Chironomidae,2
+C9417928,3,Computer science,Artificial intelligence,Image (mathematics),Image processing,2
 C158071213,3,Political science,Law,Politics,Ideology,2
-C3008058167,4,"Internal medicine, Pathology",Disease,Infectious disease (medical specialty),Coronavirus disease 2019 (COVID-19),24
-C149364088,4,"Biochemistry, Genetics",Gene,Messenger RNA,Translation (biology),3
-C102789151,4,"Botany, Ecology",Pollen,Pollination,Pollinator,2
-C158448853,4,"Biochemistry, Genetics",Gene,"Gene expression, Transcription factor",Repressor,2
-C44465124,4,"Biochemistry, Genetics",Gene,"Phylogenetic tree, Phylogenetics",Clade,2
-C2779491563,4,"Biochemistry, Genetics",Gene,Mutant,Arabidopsis,2
+C3008058167,4,Internal medicine,Disease,Infectious disease (medical specialty),Coronavirus disease 2019 (COVID-19),24
+C149364088,4,Biochemistry,Gene,Messenger RNA,Translation (biology),3
+C102789151,4,Botany,Pollen,Pollination,Pollinator,2
+C158448853,4,Biochemistry,Gene,Gene expression,Repressor,2
+C44465124,4,Biochemistry,Gene,Phylogenetic tree,Clade,2
+C2779491563,4,Biochemistry,Gene,Mutant,Arabidopsis,2
 C89623803,5,Disease,Infectious disease (medical specialty),Coronavirus disease 2019 (COVID-19),Pandemic,2
-C17020691,5,Gene,"Gene expression, Transcription factor",Repressor,Operator (biology),2
+C17020691,5,Gene,Gene expression,Repressor,Operator (biology),2
