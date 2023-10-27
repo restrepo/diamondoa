@@ -323,6 +323,7 @@
 	<!-- "debug" look for `document.querySelector("#debug").innerHTML` in the script -->
 	<div id="debug"></div>
 	<div id="display_name"></div>
+	<div id="doaj"></div>
 	<script>
 	const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
@@ -390,6 +391,7 @@
 		row1.appendChild( insertCell("<b>Citations</b>") );
 		row1.appendChild( insertCell("<b>h-index</b>") );
 		row1.appendChild( insertCell("<b>APC (USD)</b>") );
+		row1.appendChild( insertCell("<b>Publication time (weeks)</b>") );
     		tblHead.appendChild(row1);
 		//end row
 		tbl.appendChild(tblHead);
@@ -454,7 +456,22 @@
 			let i = 0;
 			while (i < item.issn.length) {
     			console.log(item.issn[i]);
-    		i++;
+				//if api DOAJ is working break and store this issn
+				fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn[i])
+				.then(response => response.json())
+				.then((doaj) => {
+		      	// we call that data here
+				if (doaj.total == 1){
+					console.log("doaj 1:" + doaj.total);
+		      		console.log("doaj: " + doaj.results[0].bibjson.publication_time_weeks); // check the data on the console
+		      		//output.innerHTML = ""; // Initial content is empty
+			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
+				} else {
+					row.appendChild( insertCell(""));
+				};
+		        });				
+				break;
+    		    i++;
             };
 
 
