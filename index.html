@@ -18,7 +18,8 @@
 	  <!-- <p><label for="concept">Select a level-one OpenAlex concept:</label></p> -->
 	  <select name="concept" id="concept">
 		<option value=""> Select level-one OpenAlex concept</option>
-	        <option value="C124952713"> Art → Literature </option>
+	    <option value="all"> All open access journals </option>
+	    <option value="C124952713"> Art → Literature </option>
 		<option value="C153349607"> Art → Visual arts </option>
 		<option value="C52119013"> Art, History → Art history </option>
 		<option value="C74916050"> Art, History → Classics </option>
@@ -408,7 +409,11 @@
 		headers.append('Access-Control-Allow-Credentials', 'true');
 
 		// Use an API-REST call to get the `data` for the url parameter `concept` 
-		const apirest = "https://api.openalex.org/sources?filter=concepts.id:" + concept + ",apc_usd:" + apc_usd + "&per_page=200";
+		var conceptid = "";
+		if (concept != "all" ){
+			conceptid = "concepts.id:" + concept + ",";
+		}
+		const apirest = "https://api.openalex.org/sources?filter=" + conceptid + "apc_usd:" + apc_usd + "&per_page=200";
 		console.log(apirest);
 		fetch(apirest)
 		.then(response => response.json())
@@ -472,22 +477,17 @@
 				.then((doaj) => {
 		      	// we call that data here
 				if (doaj.total == 1){
-					console.log("doaj 1:" + doaj.total);
-		      		console.log("doaj: " + doaj.results[0].bibjson.publication_time_weeks); // check the data on the console
 		      		//output.innerHTML = ""; // Initial content is empty
 			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
 					row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
 					row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
 				} else {
-					console.log("doaj 0:" + doaj.total);
 					j++;
 				};
 		        });
 				await sleep(800);
     		    i++;
-				console.log("cr:" + i + " " + j);
 				if (j < i) {
-					console.log("i++"+i);
 					break; // TODO: only first issn
 					}
             };
