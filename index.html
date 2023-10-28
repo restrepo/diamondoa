@@ -453,7 +453,7 @@
 			//row
 			const row = document.createElement("tr");
 			
-	      	row.appendChild( insertCell(`<a href="${item.homepage_url}">${item.display_name}</a>`) );
+	      	row.appendChild( insertCell(`<a href="${item.homepage_url}" target="_blank" >${item.display_name}</a>`) );
 			row.appendChild( insertCell(`${item.issn[0]}`) );
 	      	row.appendChild( insertCell(`${item.host_organization_name}`) );
 			if (item.country_code){
