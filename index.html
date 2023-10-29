@@ -370,6 +370,9 @@
 
 	//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<br/><br/>";
 
+	//temporary html message. The #doaj innerHTML will be replaced later by an empty string (see below)
+    document.querySelector("#doaj").innerHTML = '<h3> <font color="#ff0000"> <b>Wait:</b> </font> Fetching data from DOAJ...</h3>'
+
 	tbl=buildTable(concept,max_apc);
 
 
@@ -481,10 +484,12 @@
 			    } 
 			});
 			await sleep(500);
+			document.querySelector("#doaj").innerHTML = ''
 			tblBody.appendChild(row);
 			//end row
 			return tblBody;
 		};
+		
 	</script>
 	<hr>
 	<h3>Advanced</h3>
