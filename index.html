@@ -383,7 +383,7 @@
 		//row
 		const row1 = document.createElement("tr");
 	    row1.appendChild( insertCell("<b>Journal</b>") );
-		row1.appendChild( insertCell("<b>ISSN</b>") );		
+		row1.appendChild( insertCell('<b><a href="https://en.wikipedia.org/wiki/ISSN#Linking_ISSN">ISSN_L</a></b>') );		
 	    row1.appendChild( insertCell("<b>Publisher</b>") );
 		row1.appendChild( insertCell("<b>Country</b>") );
 		row1.appendChild( insertCell("<b>Articles</b>") );
@@ -454,7 +454,7 @@
 			const row = document.createElement("tr");
 			
 	      	row.appendChild( insertCell(`<a href="${item.homepage_url}" target="_blank" >${item.display_name}</a>`) );
-			row.appendChild( insertCell(`${item.issn[0]}`) );
+			row.appendChild( insertCell(`${item.issn_l}`) );
 	      	row.appendChild( insertCell(`${item.host_organization_name}`) );
 			if (item.country_code){
 					row.appendChild( insertCell( regionNames.of( `${item.country_code}`) ) );
@@ -469,29 +469,18 @@
 			let i = 0;
 			let j = 0;
 			console.log("row b: " + row.childElementCount);
-			while (i < item.issn.length) {
-    			console.log(item.issn[i]);
-				//if api DOAJ is working break and store this issn
-				fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn[i])
-				.then(response => response.json())
-				.then((doaj) => {
+			fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn_l)
+			.then(response => response.json())
+			.then((doaj) => {
 		      	// we call that data here
 				if (doaj.total == 1){
 		      		//output.innerHTML = ""; // Initial content is empty
 			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
 					row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
 					row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
-				} else {
-					j++;
-				};
-		        });
-				await sleep(800);
-    		    i++;
-				if (j < i) {
-					break; // TODO: only first issn
-					}
-            };
-
+			    } 
+			});
+			await sleep(500);
 			tblBody.appendChild(row);
 			//end row
 			return tblBody;
