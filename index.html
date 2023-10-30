@@ -472,6 +472,8 @@
 			let i = 0;
 			let j = 0;
 			console.log("row b: " + row.childElementCount);
+			// TOD0: load the DOAJ data offline: 
+			// https://stackoverflow.com/questions/2722159/how-to-filter-object-array-based-on-attributes
 			fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn_l)
 			.then(response => response.json())
 			.then((doaj) => {
