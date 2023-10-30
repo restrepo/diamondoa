@@ -418,7 +418,7 @@
 		if (concept != "all" ){
 			conceptid = "concepts.id:" + concept + ",";
 		}
-		const apirest = "https://api.openalex.org/sources?filter=" + conceptid + "apc_usd:" + apc_usd + "&per_page=200";
+		const apirest = "https://api.openalex.org/sources?filter=is_oa:true," + conceptid + "apc_usd:" + apc_usd + "&per_page=200";
 		console.log(apirest);
 		fetch(apirest)
 		.then(response => response.json())
@@ -474,9 +474,9 @@
 			let i = 0;
 			let j = 0;
 			console.log("row b: " + row.childElementCount);
-			// TOD0: load the DOAJ data offline: 
+			
 			// https://stackoverflow.com/questions/2722159/how-to-filter-object-array-based-on-attributes
-
+            // With https://github.com/colav-playground/OpenAlex/blob/main/DOAJ_backend.ipynb
 			fetch("data/DOAJ.json")
 			.then(response => response.json())
 			.then((doaj) => {
