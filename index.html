@@ -344,24 +344,26 @@
 	}			
 	// C109214941 or ... for example
 	//const display_name = "";
-	fetch("https://api.openalex.org/concepts?filter=openalex_id:" + concept)
-		.then(response => response.json())
-		.then((hola) => {
+	if (concept != "all" ){
+		fetch("https://api.openalex.org/concepts?filter=openalex_id:" + concept)
+			.then(response => response.json())
+			.then((hola) => {
 		      // we call that data here
 		      console.log("hola: " + hola.results[0].display_name); // check the data on the console
 		      //output.innerHTML = ""; // Initial content is empty
 		      const display_name = hola.results[0].display_name;
 			  document.querySelector("#display_name").innerHTML = "<b>" + display_name + "</b>";			  
 		    });
+		} else {
+			document.querySelector("#display_name").innerHTML = "<b>All journals</b>";}
 
-
-	sleep(100);
+	//sleep(100);
 	var gold = "open access journals"
 	if ( max_apc != "0") {
 		gold = "and gold open access journals with maximum APC of " + max_apc + " USD";
 	}
 
-	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<h3>Results</h3><p>Only first 200 journals are shown</p><hr>";
+	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<h3>Results</h3><p>Only first 200 journals are shown (hover over the buttons for keywords and subjects)</p><hr>";
 	
 	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "Diamond " + gold + " for: ";
   	// appends <table> into <body>
@@ -474,24 +476,40 @@
 			console.log("row b: " + row.childElementCount);
 			// TOD0: load the DOAJ data offline: 
 			// https://stackoverflow.com/questions/2722159/how-to-filter-object-array-based-on-attributes
-			fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn_l)
+
+			fetch("data/DOAJ.json")
 			.then(response => response.json())
 			.then((doaj) => {
-		      	// we call that data here
-				if (doaj.total == 1){
-		      		//output.innerHTML = ""; // Initial content is empty
-			  		row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
-					row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
-					row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
-			    } 
+				console.log(item.issn_l)
+				if ( doaj[item.issn_l] !== undefined ){
+					console.log("doaj: " + doaj[item.issn_l]);
+					row.appendChild( insertCell(`${doaj[item.issn_l].publication_time_weeks}`));
+
+					row.appendChild( insertCell(`<button title="${doaj[item.issn_l].keywords}">${doaj[item.issn_l].language}</button>`));
+					row.appendChild( insertCell(`<button title="${doaj[item.issn_l]["subject.term"]}">${doaj[item.issn_l]["license.type"]}</button>`));
+				} else {
+					row.appendChild( insertCell(""));
+					row.appendChild( insertCell(""));
+					row.appendChild( insertCell(""));
+				}
 			});
+			//fetch("https://doaj.org/api/v2/search/journals/issn:" + item.issn_l)
+			//.then(response => response.json())
+			//.then((doaj) => {
+		    //  	// we call that data here
+			//	if (doaj.total == 1){
+		    //  		//output.innerHTML = ""; // Initial content is empty
+			//  	row.appendChild( insertCell(`${doaj.results[0].bibjson.publication_time_weeks}`));
+			//		row.appendChild( insertCell(`<button title="${doaj.results[0].bibjson.keywords}">${doaj.results[0].bibjson.language}</button>`));
+			//		row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
+			//    } 
+			//});
 			await sleep(500);
 			document.querySelector("#doaj").innerHTML = ''
 			tblBody.appendChild(row);
 			//end row
 			return tblBody;
 		};
-		
 	</script>
 	<hr>
 	<h3>Advanced</h3>
