@@ -484,8 +484,8 @@
 					console.log("doaj: " + doaj[item.issn_l]);
 					row.appendChild( insertCell(`${doaj[item.issn_l].publication_time_weeks}`));
 
-					row.appendChild( insertCell(`<button title="${doaj[item.issn_l].keywords}">${doaj[item.issn_l].language}</button>`));
-					row.appendChild( insertCell(`<button title="${doaj[item.issn_l]["subject.term"]}">${doaj[item.issn_l]["license.type"]}</button>`));
+					row.appendChild( insertCell(`<button title="Subjects: ${doaj[item.issn_l]["subject.term"]}">${doaj[item.issn_l].language}</button>`));
+					row.appendChild( insertCell(`<button title="Keywords: ${doaj[item.issn_l].keywords}">${doaj[item.issn_l]["license.type"]}</button>`));
 				} else {
 					row.appendChild( insertCell(""));
 					row.appendChild( insertCell(""));
