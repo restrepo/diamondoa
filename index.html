@@ -362,7 +362,7 @@
 		gold = "and gold open access journals with maximum APC of " + max_apc + " USD";
 	}
 
-	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<h3>Results</h3><p>Only first 200 journals are shown (hover over the buttons for keywords and subjects)</p><hr>";
+	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "<h3>Results</h3><p>Only first 25 journals are shown (hover over the buttons for keywords and subjects)</p><hr>";
 	
 	document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "Diamond " + gold + " for: ";
   	// appends <table> into <body>
@@ -417,7 +417,7 @@
 		if (concept != "all" ){
 			conceptid = "concepts.id:" + concept + ",";
 		}
-		const apirest = "https://api.openalex.org/sources?filter=is_oa:true," + conceptid + "apc_usd:" + apc_usd + "&per_page=200";
+		const apirest = "https://api.openalex.org/sources?filter=is_oa:true," + conceptid + "apc_usd:" + apc_usd + "&per_page=25";
 		console.log(apirest);
 		fetch(apirest)
 		.then(response => response.json())
@@ -503,7 +503,7 @@
 			//		row.appendChild( insertCell(`${doaj.results[0].bibjson.license[0].type}`));
 			//    } 
 			//});
-			await sleep(1000);
+			await sleep(500);
 			document.querySelector("#doaj").innerHTML = ''
 			tblBody.appendChild(row);
 			//end row
