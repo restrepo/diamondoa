@@ -1,5 +1,5 @@
-# Diamond Open Access journals
-Deploy info from API-REST response.
+# Diamond or Gold Open Access journals
+Search Open Access journals by OpenAlex concepts and DOAJ APC 
 
 ## Pages from GitHub Actions
 * Go to "Settings" -> "Pages".
