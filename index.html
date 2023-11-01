@@ -319,6 +319,7 @@
 	<div id="display_name"></div>
 	<div id="doaj"></div>
 	<div id="page"></div>
+	<div id="count"></div>
 	<script>
 	//const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 	function sleep(ms) {
@@ -442,6 +443,8 @@
 		.then((data) => {
 		      // we call that data here
 		      console.log(data); // check the data on the console
+		     document.querySelector("#count").innerHTML = `${data.metadata.count} journals found`;
+	             document.querySelector("#debug").appendChild(document.querySelector("#count"));	
 		      //output.innerHTML = ""; // Initial content is empty
 		      data.results.forEach((el) => {
 		        // loop through the json data using forEach method
