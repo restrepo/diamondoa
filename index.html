@@ -388,7 +388,7 @@
 	document.querySelector("#debug").appendChild(tbl);	
 	if (nextPage){
 		document.querySelector("#page").innerHTML = `<a href=?max_apc=${max_apc}&concept=${concept}&page=${nextPage}> Next</a>`;
-	    document.querySelector("#debug").appendChild(document.querySelector("#count").appendChild(document.querySelector("#page")));
+	    document.querySelector("#debug").appendChild(document.querySelector("#page"));
 	   }
 
 	//document.querySelector("#debug").innerHTML = document.querySelector("#debug").innerHTML + "Next<br/><br/>";
