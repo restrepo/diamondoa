@@ -319,6 +319,7 @@
 	<div id="display_name"></div>
 	<div id="doaj"></div>
 	<div id="page"></div>
+	<div id="count"></div>
 	<script>
 	//const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 	function sleep(ms) {
@@ -386,7 +387,7 @@
 
 	document.querySelector("#debug").appendChild(tbl);	
 	if (nextPage){
-		document.querySelector("#page").innerHTML = `<a href=?max_apc=${max_apc}&concept=${concept}&page=${nextPage}> Next</a>`;
+		document.querySelector("#page").innerHTML = `<a href=?max_apc=${max_apc}&concept=${concept}&page=${nextPage}> Next: page ${nextPage}</a>`;
 	    document.querySelector("#debug").appendChild(document.querySelector("#page"));
 	   }
 
@@ -442,6 +443,8 @@
 		.then((data) => {
 		      // we call that data here
 		      console.log(data); // check the data on the console
+		     document.querySelector("#count").innerHTML = `${data.meta.count} journals found in ${Math.floor(data.meta.count/25)+1} pages`;
+	             document.querySelector("#debug").appendChild(document.querySelector("#count"));	
 		      //output.innerHTML = ""; // Initial content is empty
 		      data.results.forEach((el) => {
 		        // loop through the json data using forEach method
