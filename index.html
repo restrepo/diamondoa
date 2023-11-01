@@ -443,7 +443,7 @@
 		.then((data) => {
 		      // we call that data here
 		      console.log(data); // check the data on the console
-		     document.querySelector("#count").innerHTML = `${data.metadata.count} journals found`;
+		     document.querySelector("#count").innerHTML = `${data.meta.count} journals found`;
 	             document.querySelector("#debug").appendChild(document.querySelector("#count"));	
 		      //output.innerHTML = ""; // Initial content is empty
 		      data.results.forEach((el) => {
